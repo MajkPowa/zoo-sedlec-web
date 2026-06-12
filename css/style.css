@@ -528,7 +528,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   .review-grid{width:86vw;columns:1}
   .a-lion{width:320px}
   .a-tiger{width:240px}
-  .ticket-row{flex-wrap:wrap;align-items:center}
+  /* tickets stack — let the section grow and keep the sea below them */
+  .sec-pricing{height:auto;padding-bottom:32vh}
+  .ticket-row{flex-wrap:wrap;align-items:center;justify-content:center}
   .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
 }
 @media (max-width:720px){
@@ -537,6 +539,25 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   .sb-sep{display:none}
   .sb-btn{width:100%}
   .hero-title .line{white-space:normal}
-  .paper-card{position:relative;left:6% !important;right:auto !important;top:auto !important;margin:30px 0}
+  .paper-card{position:relative;left:6% !important;right:auto !important;top:auto !important;margin:30px 0;width:88vw}
+
+  /* pricing: column of tickets, sea stays under them */
+  .sec-pricing{padding-bottom:36vh}
+  .ticket-row{flex-direction:column;align-items:center;gap:30px}
+  .ticket:nth-child(2){transform:rotate(.8deg)}
+
+  /* things to do: flow layout instead of absolute columns */
+  .sec-things{height:auto;padding-bottom:10vh}
+  .things-head{position:static;padding:13vh 6% 0;max-width:none}
+  .a-whaleshark{position:static;display:block;width:92vw;margin:26px auto 0}
+  .todo-list{position:static;width:auto;margin:24px 6% 0}
+
+  /* reviews: flow layout */
+  .sec-love{height:auto;padding-bottom:26vh}
+  .love-head{position:static;padding:12vh 6% 0}
+  .a-seaturtle{width:190px;right:2%;top:2%}
+  .review-grid{position:static;width:auto;margin:34px 6% 0}
+  .a-jelly,.a-moorish,.a-smallfish{display:none}
+
   .footer-grid{grid-template-columns:1fr}
 }
