@@ -313,12 +313,37 @@ gsap.fromTo(
     scrollTrigger: { trigger: ".sec-pricing", start: "top 60%", end: "bottom 70%", scrub: true },
   }
 );
-// foam keeps lapping
-gsap.to(".sea-foam", {
-  x: -38,
+// the tide breathes vertically — the wave rolls up the beach and recedes
+gsap.to(".sea-edge .tide", {
+  y: -18,
   yoyo: true,
   repeat: -1,
   duration: 3.4,
+  ease: "sine.inOut",
+});
+// inner water layers follow with a slight phase shift for depth
+gsap.to(".sea-foam .w1", {
+  y: -9,
+  yoyo: true,
+  repeat: -1,
+  duration: 3.4,
+  delay: 0.35,
+  ease: "sine.inOut",
+});
+gsap.to(".sea-foam .w2", {
+  y: -12,
+  yoyo: true,
+  repeat: -1,
+  duration: 4.1,
+  delay: 0.6,
+  ease: "sine.inOut",
+});
+// barely-there lateral sway
+gsap.to(".sea-foam", {
+  x: -10,
+  yoyo: true,
+  repeat: -1,
+  duration: 5.6,
   ease: "sine.inOut",
 });
 

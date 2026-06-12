@@ -74,6 +74,16 @@
       <img class="vine" src="assets/img/el-vine1.png" alt="" style="left:23%;height:34%">
       <img class="vine flip" src="assets/img/el-vine2.png" alt="" style="left:57%;height:28%">
       <img class="vine flip" src="assets/img/el-vine1.png" alt="" style="left:79%;height:30%">
+      <!-- leafy clumps on trunks -->
+      <svg class="fz-leaves" viewBox="0 0 1600 1450" preserveAspectRatio="none">
+        <g fill="#3f8f5c">
+          <circle cx="180" cy="600" r="26"/><circle cx="210" cy="585" r="20"/>
+          <circle cx="1140" cy="520" r="24"/><circle cx="1170" cy="505" r="18"/>
+          <circle cx="660" cy="760" r="22"/><circle cx="685" cy="748" r="16"/>
+          <circle cx="980" cy="900" r="24"/><circle cx="1008" cy="888" r="17"/>
+          <circle cx="370" cy="980" r="20"/><circle cx="392" cy="968" r="15"/>
+        </g>
+      </svg>
       <!-- canopy shade -->
       <div class="fz-canopy"></div>
       <!-- foreground trunks -->
@@ -399,19 +409,36 @@
       </article>
     </div>
 
-    <!-- sea rolling in at the bottom -->
+    <!-- sea rolling in at the bottom: wet sand / thick foam / two water layers -->
     <div class="sea-edge" aria-hidden="true">
-      <svg class="sea-foam" viewBox="0 0 1600 240" preserveAspectRatio="none">
-        <path d="M0 110 Q 100 70 200 100 T 400 96 T 600 104 T 800 92 T 1000 102 T 1200 90 T 1400 100 T 1600 92 L 1600 240 L 0 240 Z" fill="#ffffff"/>
-        <path d="M0 124 Q 100 86 200 114 T 400 110 T 600 118 T 800 106 T 1000 116 T 1200 104 T 1400 114 T 1600 106 L 1600 240 L 0 240 Z" fill="#35cbb4"/>
-        <path d="M0 190 Q 200 168 400 184 T 800 180 T 1200 176 T 1600 182 L 1600 240 L 0 240 Z" fill="#2bbfa4"/>
-      </svg>
+      <div class="tide">
+        <svg class="sea-foam" viewBox="0 0 1600 260" preserveAspectRatio="none">
+          <defs>
+            <path id="waveE" d="M0 92 Q 60 62 130 84 Q 200 106 270 80 Q 340 56 410 86 Q 480 112 560 84 Q 630 60 700 88 Q 770 112 850 82 Q 920 54 990 84 Q 1060 110 1140 84 Q 1210 60 1280 90 Q 1350 114 1430 82 Q 1500 58 1600 88 L 1600 260 L 0 260 Z"/>
+          </defs>
+          <!-- wet sand peeking above the foam -->
+          <use href="#waveE" fill="#dd9928" opacity="0.5" transform="translate(0,-22)"/>
+          <!-- thick white foam band -->
+          <use href="#waveE" fill="#ffffff"/>
+          <!-- shallow bright water -->
+          <use href="#waveE" class="w1" fill="#3fd0bb" transform="translate(0,28)"/>
+          <!-- deeper water layer -->
+          <path class="w2" d="M0 190 Q 200 170 400 184 T 800 178 T 1200 174 T 1600 182 L 1600 260 L 0 260 Z" fill="#2bbfa4"/>
+          <!-- deepest band -->
+          <path class="w3" d="M0 232 Q 260 222 520 230 T 1040 228 T 1600 230 L 1600 260 L 0 260 Z" fill="#23ad97"/>
+        </svg>
+      </div>
     </div>
   </section>
 
   <!-- ============ THINGS TO DO / UNDERWATER ============ -->
   <section class="sec sec-things" id="things">
     <div class="scene tz" aria-hidden="true">
+      <!-- sea surface seen from below: sand stripe + white waterline -->
+      <svg class="tz-surface" viewBox="0 0 1600 44" preserveAspectRatio="none">
+        <rect width="1600" height="20" fill="#f6c34c"/>
+        <path d="M0 20 Q 100 14 200 19 T 400 18 T 600 20 T 800 16 T 1000 19 T 1200 15 T 1400 19 T 1600 17 L 1600 30 Q 1500 34 1400 30 T 1200 28 T 1000 31 T 800 27 T 600 30 T 400 26 T 200 30 T 0 27 Z" fill="#ffffff" opacity="0.92"/>
+      </svg>
       <svg class="tz-rays" viewBox="0 0 1600 1500" preserveAspectRatio="none">
         <defs>
           <linearGradient id="rayT" x1="0" y1="0" x2="0" y2="1">
