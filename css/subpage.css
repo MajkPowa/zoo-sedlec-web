@@ -1,0 +1,173 @@
+/* ============ ZOO SEDLEC — subpages ============ */
+
+/* ---- sub hero ---- */
+.sub-hero{
+  position:relative;overflow:hidden;
+  height:64vh;min-height:500px;
+  display:flex;align-items:flex-end;
+}
+.sub-hero .scene-bg{position:absolute;inset:0;width:100%;height:100%}
+.sub-hero-content{
+  position:relative;z-index:6;
+  padding:0 6% 10vh;
+  max-width:980px;
+}
+.crumb{
+  display:inline-block;
+  font-size:10.5px;font-weight:600;letter-spacing:2.5px;color:#fff;
+  border:1.4px solid rgba(255,255,255,.55);border-radius:4px;
+  padding:5px 11px;margin-bottom:18px;
+}
+.sub-hero .big-title{font-size:clamp(40px,4.2vw,62px)}
+.sub-hero .section-sub{margin-top:16px;max-width:600px;line-height:1.8}
+
+/* ---- hero theme gradients (inline SVG scenes sit on top) ---- */
+.theme-forest .sub-hero{background:linear-gradient(180deg,#0c2336 0%,#11364a 40%,#175547 100%)}
+.theme-teal   .sub-hero{background:linear-gradient(180deg,#239e8d 0%,#2fb5a4 60%,#3cc9b3 100%)}
+.theme-sand   .sub-hero{background:linear-gradient(180deg,#e8932c 0%,#f0a23a 55%,#f5bf4e 100%)}
+.theme-deep   .sub-hero{background:linear-gradient(180deg,#149280 0%,#0f8170 60%,#0d7a6b 100%)}
+.theme-grass  .sub-hero{background:linear-gradient(180deg,#4f9d36 0%,#5da23c 55%,#74b54a 100%)}
+
+/* ---- content zone ---- */
+.sub-content{position:relative;overflow:hidden;padding:11vh 6% 13vh}
+.theme-forest .sub-content{background:linear-gradient(180deg,#1c6b55 0%,#2fb5a4 30%,#1ba88e 100%)}
+.theme-teal   .sub-content{background:linear-gradient(180deg,#3cc9b3 0%,#1ba88e 60%,#149280 100%)}
+.theme-sand   .sub-content{background:linear-gradient(180deg,#f5bf4e 0%,#f7ca5a 45%,#2bbfa4 115%)}
+.theme-deep   .sub-content{background:linear-gradient(180deg,#0d7a6b 0%,#117c6c 100%)}
+.theme-grass  .sub-content{background:linear-gradient(180deg,#74b54a 0%,#5da23c 100%)}
+.sub-content > *{position:relative;z-index:4}
+.sub-content .scene-bg{z-index:0}
+
+/* ---- generic content layout ---- */
+.content-wrap{max-width:1180px;margin:0 auto}
+.content-grid{
+  display:grid;gap:44px;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  align-items:start;
+}
+.content-grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(min(430px,100%),1fr))}
+.section-heading{margin-bottom:7vh;max-width:760px}
+.section-heading .section-sub{margin-top:14px}
+
+/* paper card used in normal flow (not absolutely positioned) */
+.paper-card.flow-card{
+  position:static;width:auto;max-width:none;
+  transform:rotate(-.6deg);
+}
+.paper-card.flow-card:nth-child(even){transform:rotate(.7deg)}
+
+/* ---- stat strip ---- */
+.stat-strip{
+  display:flex;flex-wrap:wrap;gap:34px;justify-content:center;
+  margin:0 auto 8vh;
+}
+.stat-card{
+  background:linear-gradient(180deg,#f4ecdb 0%,#ece0c6 100%);
+  padding:22px 34px;text-align:center;min-width:170px;
+  clip-path:polygon(3% 4%, 22% 1%, 48% 4%, 76% 1%, 97% 3%, 99% 30%, 97% 62%, 99% 96%, 78% 99%, 50% 96%, 24% 99%, 2% 97%, 1% 64%, 3% 32%);
+  filter:drop-shadow(0 12px 18px rgba(0,60,50,.25));
+  transform:rotate(-1deg);
+}
+.stat-card:nth-child(even){transform:rotate(1.1deg)}
+.stat-num{
+  font-family:'Baloo 2','Segoe UI',sans-serif;font-weight:800;
+  font-size:34px;color:var(--brown);line-height:1.1;
+}
+.stat-label{font-size:11.5px;font-weight:500;color:#8a7f6e;letter-spacing:.4px}
+
+/* ---- rule lists (návštěvní řád, checklisty) ---- */
+.rule-list{margin-top:6px}
+.rule-list li{
+  position:relative;
+  font-size:13px;font-weight:400;color:#5d5343;line-height:1.6;
+  padding:8px 0 8px 32px;
+}
+.rule-list li::before{
+  position:absolute;left:0;top:7px;
+  width:20px;height:20px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:#fff;
+  content:"✓";background:#67b537;text-align:center;line-height:20px;
+}
+.rule-list.deny li::before{content:"✕";background:#d6453c}
+
+/* ---- news / timeline ---- */
+.news-card{position:relative}
+.news-date{
+  display:inline-block;
+  background:#67b537;color:#fff;
+  font-size:11px;font-weight:600;letter-spacing:.6px;
+  border-radius:999px;padding:5px 14px;margin-bottom:16px;
+}
+.news-card.coming .news-date{background:#e8862e}
+
+/* ---- pill tags (zvířata) ---- */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.tag{
+  background:#fff;border-radius:999px;
+  padding:8px 18px;
+  font-size:12.5px;font-weight:500;color:#2b3540;
+  box-shadow:0 4px 10px rgba(0,40,30,.14);
+}
+
+/* ---- buttons ---- */
+.btn-green{
+  display:inline-block;margin-top:26px;
+  background:var(--green-btn);color:#fff;
+  font-size:13.5px;font-weight:600;letter-spacing:.3px;
+  padding:14px 30px;border-radius:999px;
+  box-shadow:0 8px 18px rgba(82,158,38,.4);
+  transition:transform .2s;
+}
+.btn-green:hover{transform:translateY(-2px)}
+
+/* ---- map page ---- */
+.zoo-map-wrap{
+  background:linear-gradient(180deg,#f4ecdb 0%,#ece0c6 100%);
+  padding:34px;
+  clip-path:polygon(1% 2%, 16% .5%, 34% 2.4%, 52% .4%, 70% 2.2%, 87% .6%, 99% 1.8%, 99.5% 25%, 98.6% 50%, 99.4% 75%, 98.8% 98%, 84% 99.4%, 66% 97.8%, 48% 99.5%, 30% 98%, 14% 99.4%, .8% 98.2%, 1.4% 74%, .6% 49%, 1.6% 25%);
+  filter:drop-shadow(0 18px 26px rgba(0,60,50,.3));
+}
+.zoo-map-wrap svg{width:100%;height:auto;display:block}
+.map-point{cursor:pointer}
+.map-point circle.dot{transition:r .2s, fill .2s}
+.map-point:hover circle.dot,.map-point.active circle.dot{fill:#e8862e}
+.map-tooltip{
+  position:absolute;z-index:30;pointer-events:none;
+  background:#26313a;color:#fff;
+  font-size:12px;font-weight:500;
+  padding:7px 12px;border-radius:8px;
+  transform:translate(-50%,-130%);
+  opacity:0;transition:opacity .15s;
+  white-space:nowrap;
+}
+.map-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 26px;margin-top:26px}
+.map-legend li{
+  font-size:12.5px;color:#5d5343;padding:6px 0;cursor:pointer;
+  display:flex;gap:10px;align-items:baseline;border-radius:6px;
+}
+.map-legend li:hover,.map-legend li.active{color:#1f6b58;font-weight:600}
+.legend-num{
+  font-family:'Baloo 2','Segoe UI',sans-serif;font-weight:800;
+  color:#b09a6e;min-width:24px;
+}
+
+/* ---- footer on subpages ---- */
+.subpage .site-footer{margin-top:0;padding-top:9vh;background:linear-gradient(180deg,#117c6c 0%,#0d7a6b 100%)}
+
+/* ---- misc ---- */
+.note-band{
+  background:rgba(255,255,255,.14);
+  border:1.5px dashed rgba(255,255,255,.55);
+  border-radius:16px;
+  color:#fff;font-size:13px;font-weight:400;line-height:1.7;
+  padding:18px 24px;
+  max-width:760px;margin:0 auto 7vh;
+}
+.note-band strong{font-weight:700}
+
+@media (max-width:760px){
+  .sub-hero{min-height:420px}
+  .content-grid,.content-grid.cols-2{grid-template-columns:1fr}
+  .stat-strip{gap:18px}
+}
