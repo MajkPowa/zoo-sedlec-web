@@ -439,6 +439,39 @@ gsap.from(".footer-grid > *", {
   scrollTrigger: { trigger: ".site-footer", start: "top 85%" },
 });
 
+/* ---------- gentle idle life (rotation/scale only — y is owned by scroll parallax) ---------- */
+
+document.querySelectorAll(".sec-hero .animal").forEach((el, i) => {
+  gsap.to(el, {
+    rotation: i % 2 ? 1.6 : -1.4,
+    transformOrigin: "50% 100%",
+    yoyo: true,
+    repeat: -1,
+    duration: 2.2 + (i % 4) * 0.45,
+    ease: "sine.inOut",
+  });
+});
+
+// tiger breathes
+gsap.to(".a-tiger", {
+  scaleY: 1.015,
+  transformOrigin: "50% 100%",
+  yoyo: true,
+  repeat: -1,
+  duration: 1.9,
+  ease: "sine.inOut",
+});
+
+// snapping turtle plods
+gsap.to(".a-turtle", {
+  rotation: 0.9,
+  transformOrigin: "50% 90%",
+  yoyo: true,
+  repeat: -1,
+  duration: 2.6,
+  ease: "sine.inOut",
+});
+
 /* ---------- bubbles ---------- */
 
 function spawnBubbles(sectionSel, count) {

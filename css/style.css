@@ -120,8 +120,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 .hero-title .line{display:block;white-space:nowrap}
 .hero-sub{
-  margin-top:22px;font-size:13.5px;font-weight:300;
-  color:#d5e4d6;letter-spacing:.3px;max-width:520px;
+  margin-top:22px;font-size:14px;font-weight:400;
+  color:#e6f0e4;letter-spacing:.3px;max-width:520px;
+  text-shadow:0 2px 10px rgba(4,20,14,.55);
 }
 /* search bar */
 .search-bar{
@@ -188,7 +189,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   color:var(--brown);letter-spacing:1.5px;margin-bottom:18px;
 }
 .card-text{
-  font-size:13px;font-weight:300;line-height:1.85;color:#776a55;
+  font-size:13.5px;font-weight:400;line-height:1.85;color:#574a36;
 }
 
 /* ============ PROTECT ============ */
@@ -218,9 +219,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 .big-title.brown{color:var(--brown)}
 .big-title.white{color:#fff;text-shadow:0 4px 14px rgba(0,60,50,.25)}
-.section-sub{font-size:13px;font-weight:300;letter-spacing:.2px}
-.brown-sub{color:#9b7444}
-.white-sub{color:rgba(255,255,255,.85)}
+.section-sub{font-size:13.5px;font-weight:400;letter-spacing:.2px}
+.brown-sub{color:#7d5a2e}
+.white-sub{color:#fff;text-shadow:0 2px 10px rgba(0,40,30,.4)}
 
 /* ============ PRICING / BEACH ============ */
 .sec-pricing{height:118vh}
@@ -268,7 +269,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 .t-list li{
   position:relative;
-  font-size:12.5px;font-weight:400;color:#5d5343;
+  font-size:12.5px;font-weight:500;color:#4f4636;
   padding:7px 0 7px 24px;
 }
 .t-list li::before{
@@ -317,7 +318,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   font-size:14.5px;font-weight:700;color:var(--brown);
   letter-spacing:1.2px;margin-bottom:8px;
 }
-.todo-body p{font-size:12px;font-weight:300;line-height:1.75;color:#776a55}
+.todo-body p{font-size:12.5px;font-weight:400;line-height:1.75;color:#574a36}
 .a-reeffish{width:74px}
 .f-orange{right:13%;top:78%}
 .f-blue-s{right:6%;top:84%}
@@ -345,7 +346,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   color:#e8962e;font-size:17px;letter-spacing:6px;margin-bottom:14px;
 }
 .review-card p{
-  font-size:12.5px;font-weight:300;line-height:1.8;color:#5d5343;
+  font-size:13px;font-weight:400;line-height:1.8;color:#4f4636;
   margin-bottom:18px;
 }
 .reviewer{
@@ -363,6 +364,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .r-meta{display:flex;flex-direction:column;line-height:1.25}
 .r-meta strong{font-size:12.5px;font-weight:600;color:#2b3540}
 .r-meta em{font-style:normal;font-size:10.5px;color:#8a8f94}
+.c-love1{left:4%;top:88%;width:220px}
+.c-love2{left:46%;top:92%;width:120px}
 .a-jelly{width:110px}
 .j1{left:8%;top:78%}
 .j2{left:18%;top:85%}
@@ -382,6 +385,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .a-wrasse{left:14%;top:47%;width:160px}
 .sf4{right:22%;top:7%}
 .sf5{right:28%;top:12%}
+.c-deep{right:5%;bottom:30%;width:260px;z-index:5}
 .cta-block{
   position:relative;z-index:6;
   padding:15vh 6% 0;
@@ -520,9 +524,40 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   /* reviews: flow layout */
   .sec-love{height:auto;padding-bottom:26vh}
   .love-head{position:static;padding:12vh 6% 0}
-  .a-seaturtle{width:190px;right:2%;top:2%}
+  .a-seaturtle{width:135px;right:1%;top:1%}
   .review-grid{position:static;width:auto;margin:34px 6% 0}
   .a-jelly,.a-moorish,.a-smallfish{display:none}
+  .c-love1{width:160px;left:3%}
+  .c-love2{display:none}
+
+  /* smaller animals so they don't collide with text */
+  .a-parrot{width:88px}
+  .a-toucan{width:110px;top:24%}
+  .a-toucan2{width:110px}
+  .a-monkey{width:115px}
+  .a-owl{width:95px}
+  .a-bird{width:66px}
+  .a-squirrel{width:78px}
+  .a-sloth{width:200px}
+  .a-snake{width:125px}
+  .a-deer{width:185px}
+  .a-croc{width:225px;right:8%}
+  .s-mushrooms{width:85px}
+  .a-frog{width:82px}
+  .a-flam1{width:110px}
+  .a-flam2{width:100px;left:72%}
+  .a-tiger{width:200px}
+  .a-turtle{width:220px}
+  .a-lion{width:280px;top:26%}
+  .stag-scene{width:330px;height:270px;right:1%}
+  .stag-scene .a-stag{width:310px;left:0;bottom:16px}
+  .a-dragonfly{width:44px}
+
+  /* deep section: keep fish away from the CTA text */
+  .a-bluetang{width:105px;left:58%;top:1.5%}
+  .a-spotfish{width:95px;right:3%;top:4%}
+  .a-lionfish,.a-wrasse{display:none}
+  .c-deep{width:150px;right:3%;bottom:34%}
 
   .footer-grid{grid-template-columns:1fr}
 }
