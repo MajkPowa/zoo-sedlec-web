@@ -1,0 +1,231 @@
+/* ============ ZOO SEDLEC — demo checkout ============ */
+
+.checkout-wrap{max-width:1080px}
+
+.demo-banner{
+  display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.16);
+  border:1.5px dashed rgba(255,255,255,.6);
+  border-radius:14px;color:#fff;
+  font-size:13px;font-weight:500;line-height:1.6;
+  padding:14px 20px;margin-bottom:34px;
+}
+.demo-banner svg{width:20px;height:20px;flex:0 0 auto}
+
+/* ---- step indicator ---- */
+.steps{
+  display:flex;justify-content:center;gap:0;
+  margin:0 auto 44px;max-width:640px;
+  counter-reset:step;
+}
+.steps li{
+  position:relative;flex:1;text-align:center;
+  font-size:11.5px;font-weight:600;color:rgba(255,255,255,.75);
+  padding-top:42px;letter-spacing:.4px;
+}
+.steps li::before{
+  counter-increment:step;content:counter(step);
+  position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,.25);color:#fff;
+  font-family:'Baloo 2','Segoe UI',sans-serif;font-weight:800;font-size:15px;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .3s;
+}
+.steps li::after{
+  content:"";position:absolute;top:16px;left:calc(50% + 22px);
+  width:calc(100% - 44px);height:3px;border-radius:2px;
+  background:rgba(255,255,255,.25);
+}
+.steps li:last-child::after{display:none}
+.steps li.active{color:#fff}
+.steps li.active::before{background:var(--green-btn)}
+.steps li.done::before{content:"✓";background:#3f9747}
+.steps li.done::after{background:#3f9747}
+
+/* ---- layout ---- */
+.co-grid{
+  display:grid;grid-template-columns:1fr 330px;gap:40px;align-items:start;
+}
+.co-main .paper-card.flow-card{transform:none}
+.co-step[hidden]{display:none}
+.co-step .card-title{font-size:clamp(24px,2.1vw,30px)}
+
+/* ---- date field ---- */
+.field{margin-bottom:20px}
+.field label{
+  display:block;font-size:12px;font-weight:600;color:#7a4a21;
+  letter-spacing:.5px;margin-bottom:7px;text-transform:uppercase;
+}
+.field input,.field select{
+  width:100%;
+  background:#fff;border:1.6px solid #d8c9a6;border-radius:12px;
+  font-family:'Poppins',sans-serif;font-size:14px;color:#33302a;
+  padding:12px 16px;outline:none;transition:border-color .2s;
+}
+.field input:focus{border-color:#67b537}
+.field input.invalid{border-color:#d6453c;background:#fff6f5}
+.field .hint{font-size:11px;color:#9b8a6a;margin-top:5px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* ---- ticket counter rows ---- */
+.t-row{
+  display:flex;align-items:center;gap:16px;
+  padding:16px 4px;border-bottom:1.6px dashed #d8c9a6;
+}
+.t-row:last-of-type{border-bottom:none}
+.t-info{flex:1}
+.t-info strong{display:block;font-size:14.5px;color:#33302a;font-weight:600}
+.t-info span{font-size:11.5px;color:#8a7a5c}
+.t-price-tag{
+  font-family:'Baloo 2','Segoe UI',sans-serif;font-weight:800;
+  font-size:17px;color:#7a4a21;min-width:74px;text-align:right;
+}
+.counter{display:flex;align-items:center;gap:12px}
+.counter button{
+  width:34px;height:34px;border-radius:50%;
+  background:#fff;border:1.8px solid #c9b283;
+  font-size:18px;font-weight:700;color:#7a4a21;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .15s;
+}
+.counter button:hover:not(:disabled){background:#67b537;border-color:#67b537;color:#fff}
+.counter button:disabled{opacity:.35;cursor:default}
+.counter output{
+  min-width:26px;text-align:center;
+  font-family:'Baloo 2','Segoe UI',sans-serif;font-weight:800;font-size:18px;color:#33302a;
+}
+
+.form-error{
+  display:none;
+  background:#fdecea;border-radius:10px;color:#b3261e;
+  font-size:12.5px;font-weight:500;padding:11px 15px;margin-top:16px;
+}
+.form-error.show{display:block}
+
+/* ---- buttons ---- */
+.co-actions{display:flex;justify-content:space-between;align-items:center;margin-top:28px;gap:14px}
+.btn-back{
+  background:none;border:none;
+  font-size:13px;font-weight:600;color:#9b7444;cursor:pointer;
+  padding:10px 6px;
+}
+.btn-back:hover{color:#7a4a21}
+
+/* ---- summary aside ---- */
+.co-summary{position:sticky;top:24px}
+.co-summary h3{
+  font-family:'Baloo 2','Segoe UI',sans-serif;font-weight:800;
+  font-size:21px;color:#7a4a21;margin-bottom:16px;letter-spacing:.5px;
+}
+.sum-line{
+  display:flex;justify-content:space-between;gap:10px;
+  font-size:13px;color:#574a36;padding:6px 0;
+}
+.sum-line span:last-child{font-weight:600;white-space:nowrap}
+.sum-date{font-size:12px;color:#8a7a5c;margin-bottom:8px}
+.sum-total{
+  display:flex;justify-content:space-between;align-items:baseline;
+  border-top:2.5px dashed #c9b890;margin-top:14px;padding-top:14px;
+}
+.sum-total span:first-child{font-size:13px;font-weight:600;color:#574a36}
+.sum-total span:last-child{
+  font-family:'Baloo 2','Segoe UI',sans-serif;font-weight:800;
+  font-size:26px;color:#7a4a21;
+}
+.co-summary .btn-green{width:100%;text-align:center;margin-top:20px;border:none;cursor:pointer;font-family:'Poppins',sans-serif}
+.co-summary .btn-green:disabled{opacity:.5;cursor:default;transform:none}
+
+/* ---- payment ---- */
+.pay-tabs{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap}
+.pay-tab{
+  flex:1;min-width:120px;
+  background:#fff;border:1.8px solid #d8c9a6;border-radius:14px;
+  padding:13px 10px;text-align:center;cursor:pointer;
+  font-size:13px;font-weight:600;color:#574a36;
+  transition:all .2s;
+}
+.pay-tab.active{border-color:#67b537;background:#f1f9ea;color:#3f7d24}
+.pay-panel{display:none}
+.pay-panel.active{display:block}
+.card-demo-note{
+  background:#eef6ff;border-radius:10px;color:#2c5f8a;
+  font-size:12px;padding:10px 14px;margin-bottom:18px;
+}
+.qr-box{
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+  background:#fff;border-radius:16px;padding:26px;margin:0 auto;
+  max-width:300px;
+}
+.qr-box .qr-target{padding:8px;background:#fff}
+.qr-box p{font-size:11.5px;color:#8a7a5c;text-align:center;line-height:1.6}
+.pay-onsite{
+  background:#fff;border-radius:14px;padding:20px;
+  font-size:13px;color:#574a36;line-height:1.8;
+}
+.pay-spinner{
+  display:none;align-items:center;justify-content:center;gap:12px;
+  font-size:13.5px;font-weight:600;color:#574a36;padding:14px 0;
+}
+.pay-spinner.show{display:flex}
+.pay-spinner::before{
+  content:"";width:22px;height:22px;border-radius:50%;
+  border:3px solid #d8c9a6;border-top-color:#67b537;
+  animation:spin .8s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---- success / tickets ---- */
+.success-head{text-align:center;margin-bottom:26px}
+.success-check{
+  width:74px;height:74px;border-radius:50%;margin:0 auto 18px;
+  background:#67b537;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+}
+.success-check svg{width:38px;height:38px}
+.order-code{
+  display:inline-block;background:#fff;border-radius:999px;
+  font-family:'Baloo 2','Segoe UI',sans-serif;font-weight:800;
+  font-size:16px;color:#7a4a21;letter-spacing:1.5px;
+  padding:9px 22px;margin-top:10px;
+}
+.tickets-list{display:flex;flex-direction:column;gap:22px;margin-top:28px}
+.eticket{
+  display:flex;align-items:center;gap:20px;
+  background:url(../assets/img/paper-landscape.png) center/100% 100% no-repeat;
+  padding:24px 28px;
+  filter:drop-shadow(0 10px 18px rgba(120,70,20,.25));
+}
+.eticket .qr-target{flex:0 0 auto;background:#fff;padding:6px;border-radius:8px}
+.et-info{flex:1}
+.et-info .et-type{
+  font-family:'Baloo 2','Segoe UI',sans-serif;font-weight:800;
+  font-size:19px;color:#7a4a21;letter-spacing:.5px;
+}
+.et-info .et-meta{font-size:12px;color:#8a7a5c;margin-top:4px;line-height:1.7}
+.et-code{
+  font-size:11px;font-weight:600;color:#b09a6e;letter-spacing:2px;margin-top:8px;
+}
+.success-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.btn-outline-brown{
+  display:inline-block;border:1.8px solid #b09a6e;border-radius:999px;
+  background:none;cursor:pointer;
+  padding:13px 28px;font-family:'Poppins',sans-serif;
+  font-size:13px;font-weight:600;color:#7a4a21;
+  transition:all .2s;
+}
+.btn-outline-brown:hover{background:#7a4a21;border-color:#7a4a21;color:#fff}
+
+/* ---- print ---- */
+@media print{
+  body *{visibility:hidden}
+  .print-area,.print-area *{visibility:visible}
+  .print-area{position:absolute;inset:0;padding:20px}
+  .eticket{filter:none;break-inside:avoid;border:1.5px solid #c9b283}
+}
+
+@media (max-width:900px){
+  .co-grid{grid-template-columns:1fr}
+  .co-summary{position:static;order:-1}
+  .steps li{font-size:10px}
+}

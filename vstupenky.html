@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vstupenky online — ZOO Sedlec</title>
+<meta name="description" content="Ukázkový online nákup vstupenek do Faunaparku ZOO Sedlec.">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/subpage.css">
+<link rel="stylesheet" href="css/checkout.css">
+</head>
+<body class="subpage theme-sand">
+
+<header class="site-header">
+  <a class="logo" href="index.html">
+    <span class="logo-badge"><img src="assets/logo-zoo-sedlec.png" alt="ZOO Sedlec"></span>
+    <span class="logo-text">
+      <span class="logo-title">ZOO SEDLEC</span>
+      <span class="logo-sub">faunapark u Mikulova</span>
+    </span>
+  </a>
+  <nav class="main-nav">
+    <a href="index.html">Úvod</a>
+    <a href="nase-zoo.html">Naše ZOO</a>
+    <a href="pred-navstevou.html" class="active">Vstupné</a>
+    <a href="index.html#things">Zážitky</a>
+    <a href="index.html#discover">Kontakt</a>
+  </nav>
+  <div class="header-icons">
+    <button class="icon-btn" aria-label="Účet">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.4"/><path d="M5.5 19c1.2-3.2 3.6-4.6 6.5-4.6s5.3 1.4 6.5 4.6"/></svg>
+    </button>
+    <button class="icon-btn" aria-label="Hledat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M16.5 16.5 21 21"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- ============ SUB HERO ============ -->
+  <section class="sub-hero" style="height:46vh;min-height:380px">
+    <svg class="scene-bg" viewBox="0 0 1600 600" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="#e8a232" opacity="0.5">
+        <path d="M0 200 Q 300 160 640 192 Q 980 224 1320 188 Q 1480 172 1600 190 L 1600 240 Q 1300 270 960 242 Q 600 214 280 248 Q 120 262 0 250 Z"/>
+        <path d="M0 430 Q 340 392 700 424 Q 1060 456 1400 420 L 1600 412 L 1600 470 Q 1260 510 900 478 Q 540 450 200 482 L 0 490 Z"/>
+      </g>
+      <path d="M120 540 l 9 18 20 2 -15 14 4 20 -18 -10 -18 10 4 -20 -15 -14 20 -2 Z" fill="#e2703a"/>
+      <path d="M1480 480 a 16 16 0 0 1 32 0 q -16 14 -32 0 Z" fill="#f3e3c2"/>
+    </svg>
+    <img class="sprite" data-float src="assets/img/animal-toucan-flip.png" alt="" style="right:8%;top:14%;width:150px">
+    <div class="sub-hero-content">
+      <span class="crumb">ZOO SEDLEC</span>
+      <h1 class="big-title white" data-letters>VSTUPENKY ONLINE</h1>
+      <p class="section-sub white-sub">Naplánujte si návštěvu během minuty — vyberte den, počet návštěvníků a vstupenky máte v kapse.</p>
+    </div>
+  </section>
+
+  <!-- ============ CHECKOUT ============ -->
+  <section class="sub-content">
+    <div class="content-wrap checkout-wrap">
+
+      <div class="demo-banner" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M12 11v5"/></svg>
+        <span><strong>Ukázkový režim.</strong> Tohle je demo nákupního procesu — žádná skutečná platba neproběhne a vstupenky nejsou platné. Aktuálně je vstupné v zoo dobrovolné (QR platbou nebo do kasičky u vstupu do areálu B).</span>
+      </div>
+
+      <ol class="steps" id="steps">
+        <li class="active">Vstupenky</li>
+        <li>Údaje</li>
+        <li>Platba</li>
+        <li>Hotovo</li>
+      </ol>
+
+      <div class="co-grid" id="coGrid">
+        <div class="co-main">
+
+          <!-- STEP 1: tickets -->
+          <div class="co-step paper-card flow-card" id="step1">
+            <span class="card-kicker">KROK 1</span>
+            <h2 class="card-title">VYBERTE DEN A VSTUPENKY</h2>
+            <div class="field" style="max-width:280px">
+              <label for="visitDate">Datum návštěvy</label>
+              <input type="date" id="visitDate">
+              <div class="hint">Otevřeno denně 9:00–18:00</div>
+            </div>
+
+            <div class="t-row">
+              <div class="t-info"><strong>Dospělí</strong><span>18 let a více</span></div>
+              <div class="t-price-tag">120 Kč</div>
+              <div class="counter" data-type="adult">
+                <button type="button" class="minus" aria-label="Méně">−</button>
+                <output>0</output>
+                <button type="button" class="plus" aria-label="Více">+</button>
+              </div>
+            </div>
+            <div class="t-row">
+              <div class="t-info"><strong>Děti 3–17 let</strong><span>pouze v doprovodu dospělé osoby</span></div>
+              <div class="t-price-tag">60 Kč</div>
+              <div class="counter" data-type="child">
+                <button type="button" class="minus" aria-label="Méně">−</button>
+                <output>0</output>
+                <button type="button" class="plus" aria-label="Více">+</button>
+              </div>
+            </div>
+            <div class="t-row">
+              <div class="t-info"><strong>Děti do 2 let</strong><span>vstup zdarma</span></div>
+              <div class="t-price-tag">0 Kč</div>
+              <div class="counter" data-type="baby">
+                <button type="button" class="minus" aria-label="Méně">−</button>
+                <output>0</output>
+                <button type="button" class="plus" aria-label="Více">+</button>
+              </div>
+            </div>
+            <div class="t-row">
+              <div class="t-info"><strong>Komentovaná prohlídka</strong><span>60 minut s průvodcem, pro celou skupinu</span></div>
+              <div class="t-price-tag">500 Kč</div>
+              <div class="counter" data-type="tour">
+                <button type="button" class="minus" aria-label="Méně">−</button>
+                <output>0</output>
+                <button type="button" class="plus" aria-label="Více">+</button>
+              </div>
+            </div>
+
+            <div class="form-error" id="err1"></div>
+          </div>
+
+          <!-- STEP 2: contact -->
+          <div class="co-step paper-card flow-card" id="step2" hidden>
+            <span class="card-kicker">KROK 2</span>
+            <h2 class="card-title">KONTAKTNÍ ÚDAJE</h2>
+            <div class="field">
+              <label for="fullName">Jméno a příjmení</label>
+              <input type="text" id="fullName" autocomplete="name" placeholder="Jana Nováková">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" autocomplete="email" placeholder="jana@email.cz">
+                <div class="hint">Sem bychom poslali vstupenky (v ukázce se nic neodesílá)</div>
+              </div>
+              <div class="field">
+                <label for="phone">Telefon (nepovinné)</label>
+                <input type="tel" id="phone" autocomplete="tel" placeholder="+420 601 551 499">
+              </div>
+            </div>
+            <div class="form-error" id="err2"></div>
+            <div class="co-actions">
+              <button type="button" class="btn-back" data-back="1">← Zpět na vstupenky</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: payment -->
+          <div class="co-step paper-card flow-card" id="step3" hidden>
+            <span class="card-kicker">KROK 3</span>
+            <h2 class="card-title">PLATBA</h2>
+            <div class="pay-tabs" id="payTabs">
+              <div class="pay-tab active" data-pay="card">💳 Kartou</div>
+              <div class="pay-tab" data-pay="qr">📱 QR platba</div>
+              <div class="pay-tab" data-pay="onsite">🏠 Na pokladně</div>
+            </div>
+
+            <div class="pay-panel active" id="pay-card">
+              <div class="card-demo-note">Demo: použijte např. kartu <strong>4242&nbsp;4242&nbsp;4242&nbsp;4242</strong>, libovolnou budoucí platnost a libovolné CVC.</div>
+              <div class="field">
+                <label for="ccNum">Číslo karty</label>
+                <input type="text" id="ccNum" inputmode="numeric" placeholder="4242 4242 4242 4242" maxlength="19">
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="ccExp">Platnost (MM/RR)</label>
+                  <input type="text" id="ccExp" inputmode="numeric" placeholder="08/27" maxlength="5">
+                </div>
+                <div class="field">
+                  <label for="ccCvc">CVC</label>
+                  <input type="text" id="ccCvc" inputmode="numeric" placeholder="123" maxlength="4">
+                </div>
+              </div>
+            </div>
+
+            <div class="pay-panel" id="pay-qr">
+              <div class="qr-box">
+                <div class="qr-target" id="qrPay"></div>
+                <p>Naskenujte v bankovní aplikaci (formát QR Platba).<br><strong>Ukázkový kód — nic neplaťte.</strong> Pokračujte tlačítkem níže.</p>
+              </div>
+            </div>
+
+            <div class="pay-panel" id="pay-onsite">
+              <div class="pay-onsite">
+                Vstupenky zaplatíte při příchodu na pokladně u hlavního vchodu (areál A) hotově nebo kartou. Rezervaci vám podržíme celý den návštěvy.
+              </div>
+            </div>
+
+            <div class="form-error" id="err3"></div>
+            <div class="pay-spinner" id="paySpinner">Zpracováváme platbu…</div>
+            <div class="co-actions">
+              <button type="button" class="btn-back" data-back="2">← Zpět na údaje</button>
+            </div>
+          </div>
+
+          <!-- STEP 4: success -->
+          <div class="co-step paper-card flow-card" id="step4" hidden>
+            <div class="success-head">
+              <div class="success-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5 10 18 19.5 6.5"/></svg>
+              </div>
+              <h2 class="card-title">HOTOVO, TĚŠÍME SE NA VÁS!</h2>
+              <p class="card-text" id="successMsg">Vstupenky jsme vystavili.</p>
+              <span class="order-code" id="orderCode">ZS-2026-000000</span>
+            </div>
+            <div class="tickets-list print-area" id="ticketsList"></div>
+            <div class="success-actions">
+              <button type="button" class="btn-outline-brown" id="btnPrint">🖨 Vytisknout / uložit PDF</button>
+              <a class="btn-green" href="index.html" style="margin-top:0">Zpět na úvod</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <aside class="co-summary paper-card flow-card" id="summaryCard">
+          <h3>SOUHRN OBJEDNÁVKY</h3>
+          <div class="sum-date" id="sumDate">Vyberte datum návštěvy</div>
+          <div id="sumLines"><div class="sum-line"><span>Zatím nic vybráno</span><span></span></div></div>
+          <div class="sum-total"><span>Celkem</span><span id="sumTotal">0 Kč</span></div>
+          <button type="button" class="btn-green" id="btnNext">Pokračovat</button>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="f-brand">
+      <span class="logo-badge f-logo"><img src="assets/logo-zoo-sedlec.png" alt="ZOO Sedlec"></span>
+      <span class="logo-title">ZOO SEDLEC</span>
+      <span class="logo-sub">Faunapark u Mikulova</span>
+      <p>Tři hektary přírody, zvířata pěti kontinentů a kus jižní Moravy k tomu. Otevřeno denně 9:00–18:00.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/profile.php?id=100063011060442" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 9H16l.5-3h-3V4.5c0-.9.3-1.5 1.6-1.5H16.6V.2C16.3.2 15.3 0 14.1 0 11.6 0 10 1.5 10 4.2V6H7.5v3H10v9h3.5V9z"/></svg></a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Návštěva</h4>
+      <a href="pred-navstevou.html">Před návštěvou</a>
+      <a href="vstupenky.html">Vstupenky online</a>
+      <a href="mapa-zoo.html">Mapa ZOO</a>
+      <a href="navstevni-rad.html">Návštěvní řád</a>
+      <a href="aktualne-ze-zoo.html">Aktuálně ze ZOO</a>
+    </div>
+    <div class="f-col">
+      <h4>Faunapark</h4>
+      <a href="nase-zoo.html">Naše ZOO</a>
+      <a href="ochrana-prirody.html">Ochrana přírody</a>
+      <a href="aktualne-ze-zoo.html" class="careers-link">Pavilon opic <span class="hiring-badge">Ve výstavbě</span></a>
+      <a href="resort-blatnice.html">Resort Blatnice</a>
+    </div>
+    <div class="f-col f-contact">
+      <h4>Kontakt</h4>
+      <p class="f-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21c4-4.5 7-8 7-11.5A7 7 0 0 0 5 9.5C5 13 8 16.5 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg>
+        Faunapark ZOO Sedlec<br>U Mikulova, 691 21 Sedlec
+      </p>
+      <p class="f-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        +420 601 551 499
+      </p>
+      <p class="f-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7 12 13l8.5-6"/></svg>
+        info@zoosedlec.cz
+      </p>
+      <a class="contact-btn" href="mailto:info@zoosedlec.cz">Napište nám</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Faunapark ZOO Sedlec. Všechna práva vyhrazena. Nákup vstupenek je ukázkový.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/subpage.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>
