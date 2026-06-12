@@ -40,203 +40,7 @@
 
   <!-- ============ FOREST ZONE : HERO + SANCTUARY ============ -->
   <div class="forest-zone">
-    <svg class="forest-bg" viewBox="0 0 1600 2400" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="forestSky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#0c2336"/>
-          <stop offset="0.35" stop-color="#11364a"/>
-          <stop offset="0.6" stop-color="#175547"/>
-          <stop offset="1" stop-color="#1c6b55"/>
-        </linearGradient>
-        <linearGradient id="rayGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#d9ffb0" stop-opacity="0.28"/>
-          <stop offset="1" stop-color="#d9ffb0" stop-opacity="0"/>
-        </linearGradient>
-        <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#41ccb6"/>
-          <stop offset="1" stop-color="#2fb5a4"/>
-        </linearGradient>
-      </defs>
-
-      <rect x="0" y="0" width="1600" height="2400" fill="url(#forestSky)"/>
-
-      <!-- back trunks -->
-      <g class="trunks-back">
-        <rect x="120" y="-40" width="90"  height="2480" rx="42" fill="#1c4a5e"/>
-        <rect x="300" y="-40" width="70"  height="2480" rx="34" fill="#1f5a50"/>
-        <rect x="470" y="-40" width="110" height="2480" rx="50" fill="#173f54"/>
-        <rect x="660" y="-40" width="80"  height="2480" rx="38" fill="#226052"/>
-        <rect x="820" y="-40" width="130" height="2480" rx="58" fill="#1a4a47"/>
-        <rect x="1010" y="-40" width="75" height="2480" rx="36" fill="#235c63"/>
-        <rect x="1150" y="-40" width="120" height="2480" rx="54" fill="#186049"/>
-        <rect x="1340" y="-40" width="90" height="2480" rx="42" fill="#1d4f60"/>
-      </g>
-
-      <!-- mid trunks -->
-      <g class="trunks-mid">
-        <rect x="40"   y="-40" width="150" height="2480" rx="64" fill="#14374f"/>
-        <rect x="240"  y="-40" width="120" height="2480" rx="54" fill="#1e5b49"/>
-        <rect x="425"  y="-40" width="90"  height="2480" rx="42" fill="#2a7558"/>
-        <rect x="575"  y="-40" width="140" height="2480" rx="60" fill="#133950"/>
-        <rect x="770"  y="-40" width="100" height="2480" rx="46" fill="#1e4d57"/>
-        <rect x="925"  y="-40" width="160" height="2480" rx="68" fill="#1b4f44"/>
-        <rect x="1135" y="-40" width="110" height="2480" rx="50" fill="#2a6b6e"/>
-        <rect x="1290" y="-40" width="140" height="2480" rx="60" fill="#173d52"/>
-        <rect x="1465" y="-40" width="120" height="2480" rx="52" fill="#226148"/>
-        <!-- bark texture -->
-        <rect x="100" y="-40" width="10" height="2480" fill="#000" opacity="0.10"/>
-        <rect x="278" y="-40" width="8"  height="2480" fill="#000" opacity="0.10"/>
-        <rect x="610" y="-40" width="12" height="2480" fill="#000" opacity="0.12"/>
-        <rect x="688" y="-40" width="7"  height="2480" fill="#fff" opacity="0.05"/>
-        <rect x="960" y="-40" width="12" height="2480" fill="#000" opacity="0.10"/>
-        <rect x="1040" y="-40" width="8" height="2480" fill="#fff" opacity="0.05"/>
-        <rect x="1330" y="-40" width="10" height="2480" fill="#000" opacity="0.10"/>
-        <rect x="800" y="-40" width="9"  height="2480" fill="#fff" opacity="0.07"/>
-        <rect x="455" y="-40" width="8"  height="2480" fill="#fff" opacity="0.06"/>
-      </g>
-
-      <!-- canopy shade -->
-      <linearGradient id="canopyShade" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#04101e" stop-opacity="0.55"/>
-        <stop offset="1" stop-color="#04101e" stop-opacity="0"/>
-      </linearGradient>
-      <rect x="0" y="0" width="1600" height="520" fill="url(#canopyShade)"/>
-
-      <!-- light rays -->
-      <g class="rays">
-        <polygon points="950,-60 1060,-60 700,1050 580,1050" fill="url(#rayGrad)"/>
-        <polygon points="1200,-60 1280,-60 1000,860 910,860" fill="url(#rayGrad)" opacity="0.8"/>
-        <polygon points="1420,-60 1500,-60 1300,700 1220,700" fill="url(#rayGrad)" opacity="0.55"/>
-        <polygon points="330,-60 395,-60 215,640 155,640" fill="url(#rayGrad)" opacity="0.5"/>
-      </g>
-
-      <!-- foreground trunks -->
-      <g class="trunks-front">
-        <rect x="-70"  y="-40" width="200" height="2480" rx="80" fill="#0c2438"/>
-        <rect x="1475" y="-40" width="200" height="2480" rx="80" fill="#0d2b3c"/>
-        <rect x="705"  y="-40" width="64"  height="2480" rx="30" fill="#0f3044"/>
-      </g>
-
-      <!-- hanging vines -->
-      <g class="vines" stroke="#5fa14b" stroke-width="5" fill="none" stroke-linecap="round">
-        <path d="M515 -10 C 540 120, 490 220, 520 360"/>
-        <path d="M880 -10 C 905 160, 855 260, 885 430"/>
-        <path d="M1255 -10 C 1230 130, 1280 230, 1250 330"/>
-        <path d="M218 470 C 250 560, 210 660, 240 770"/>
-      </g>
-      <g class="vine-leaves" fill="#6fb556">
-        <ellipse cx="528" cy="140" rx="14" ry="7" transform="rotate(-30 528 140)"/>
-        <ellipse cx="500" cy="250" rx="14" ry="7" transform="rotate(25 500 250)"/>
-        <ellipse cx="518" cy="350" rx="13" ry="6" transform="rotate(-20 518 350)"/>
-        <ellipse cx="893" cy="180" rx="14" ry="7" transform="rotate(-28 893 180)"/>
-        <ellipse cx="864" cy="300" rx="14" ry="7" transform="rotate(22 864 300)"/>
-        <ellipse cx="882" cy="420" rx="12" ry="6" transform="rotate(-18 882 420)"/>
-        <ellipse cx="1242" cy="150" rx="13" ry="7" transform="rotate(30 1242 150)"/>
-        <ellipse cx="1272" cy="260" rx="13" ry="6" transform="rotate(-25 1272 260)"/>
-        <ellipse cx="232" cy="560" rx="12" ry="6" transform="rotate(-25 232 560)"/>
-        <ellipse cx="218" cy="680" rx="12" ry="6" transform="rotate(22 218 680)"/>
-      </g>
-
-      <!-- leafy clumps on trunks -->
-      <g class="trunk-leaves" fill="#3f8f5c">
-        <circle cx="120" cy="600" r="26"/><circle cx="150" cy="585" r="20"/>
-        <circle cx="1135" cy="520" r="24"/><circle cx="1165" cy="505" r="18"/>
-        <circle cx="640" cy="760" r="22"/><circle cx="665" cy="748" r="16"/>
-        <circle cx="980" cy="900" r="24"/><circle cx="1008" cy="888" r="17"/>
-        <circle cx="350" cy="980" r="20"/><circle cx="372" cy="968" r="15"/>
-      </g>
-
-      <!-- ====== SWAMP (lower part) ====== -->
-      <g class="swamp">
-        <path d="M0 1452 Q 200 1436 400 1448 T 800 1444 T 1200 1450 T 1600 1442 L 1600 2400 L 0 2400 Z" fill="url(#waterGrad)"/>
-        <!-- trunk bases standing in water (square tops, rounded bottoms) -->
-        <g fill="#1a8275" opacity="0.9">
-          <path d="M40 1440 h150 v212 q0 60 -75 60 q-75 0 -75 -60 Z"/>
-          <path d="M575 1440 h140 v176 q0 56 -70 56 q-70 0 -70 -56 Z"/>
-          <path d="M925 1440 h160 v236 q0 64 -80 64 q-80 0 -80 -64 Z"/>
-          <path d="M1290 1440 h140 v196 q0 56 -70 56 q-70 0 -70 -56 Z"/>
-          <path d="M-70 1440 h200 v316 q0 74 -100 74 q-100 0 -100 -74 Z"/>
-          <path d="M1475 1440 h200 v296 q0 74 -100 74 q-100 0 -100 -74 Z"/>
-        </g>
-        <!-- reflections -->
-        <g fill="#67dcc8" opacity="0.55">
-          <rect x="240" y="1500" width="170" height="10" rx="5"/>
-          <rect x="520" y="1700" width="220" height="11" rx="5"/>
-          <rect x="900" y="1560" width="150" height="9"  rx="4"/>
-          <rect x="1180" y="1640" width="200" height="10" rx="5"/>
-          <rect x="340" y="1820" width="260" height="11" rx="5"/>
-          <rect x="1020" y="1900" width="230" height="10" rx="5"/>
-          <rect x="140" y="2050" width="200" height="10" rx="5"/>
-          <rect x="760" y="2120" width="260" height="11" rx="5"/>
-          <rect x="1280" y="2060" width="180" height="9" rx="4"/>
-          <rect x="480" y="2260" width="220" height="10" rx="5"/>
-          <rect x="1100" y="2300" width="190" height="9" rx="4"/>
-        </g>
-
-        <!-- mossy bank left (deer stands here) -->
-        <g>
-          <path d="M-20 2400 L -20 2110 Q 120 2060 280 2090 Q 430 2115 480 2180 Q 500 2250 470 2400 Z" fill="#3f9747"/>
-          <path d="M-20 2400 L -20 2190 Q 140 2140 300 2170 Q 430 2196 455 2260 Q 470 2320 450 2400 Z" fill="#2f7d3a" opacity="0.85"/>
-          <g stroke="#2c7434" stroke-width="6" stroke-linecap="round">
-            <path d="M120 2085 q -6 -38 4 -58"/><path d="M150 2082 q 8 -34 0 -52"/>
-            <path d="M330 2106 q -6 -34 4 -52"/><path d="M360 2110 q 8 -30 2 -48"/>
-          </g>
-        </g>
-        <!-- small mossy islet right -->
-        <g>
-          <ellipse cx="1280" cy="2210" rx="190" ry="48" fill="#3f9747"/>
-          <ellipse cx="1280" cy="2226" rx="190" ry="36" fill="#2f7d3a"/>
-          <g stroke="#2c7434" stroke-width="6" stroke-linecap="round">
-            <path d="M1210 2180 q -6 -36 4 -54"/><path d="M1244 2176 q 8 -32 0 -50"/>
-            <path d="M1352 2184 q 6 -32 -2 -50"/>
-          </g>
-        </g>
-        <!-- floating log -->
-        <g transform="rotate(-4 700 2330)">
-          <rect x="580" y="2310" width="260" height="40" rx="20" fill="#6b4a2e"/>
-          <rect x="580" y="2310" width="260" height="18" rx="9" fill="#7d5a3a"/>
-          <ellipse cx="840" cy="2330" rx="14" ry="18" fill="#54381f"/>
-          <ellipse cx="700" cy="2356" rx="120" ry="9" fill="#1f9a87" opacity="0.6"/>
-        </g>
-        <!-- lily pads -->
-        <g>
-          <path d="M880 2050 a 44 16 0 1 0 0.01 0 M880 2050 l 40 -12 l -2 18 Z" fill="#57c46b"/>
-          <ellipse cx="980" cy="2080" rx="34" ry="12" fill="#46b35c"/>
-          <ellipse cx="520" cy="1960" rx="40" ry="14" fill="#57c46b"/>
-          <ellipse cx="586" cy="1985" rx="26" ry="10" fill="#46b35c"/>
-          <ellipse cx="1420" cy="1990" rx="42" ry="15" fill="#57c46b"/>
-          <circle cx="980" cy="2068" r="9" fill="#f2a0c2"/>
-          <circle cx="980" cy="2064" r="5" fill="#fbd0e2"/>
-        </g>
-        <!-- reeds -->
-        <g stroke="#2e7a4f" stroke-width="7" stroke-linecap="round" fill="none">
-          <path d="M1490 2080 q -8 -90 6 -150"/>
-          <path d="M1520 2090 q 10 -80 -2 -140"/>
-          <path d="M610 2200 q -8 -76 6 -128"/>
-          <path d="M640 2210 q 10 -70 -2 -118"/>
-        </g>
-        <g fill="#8a5a2b">
-          <rect x="1488" y="1900" width="14" height="44" rx="7"/>
-          <rect x="1514" y="1924" width="13" height="40" rx="6"/>
-          <rect x="608" y="2046" width="13" height="40" rx="6"/>
-        </g>
-        <!-- pink flower bushes -->
-        <g>
-          <g fill="#3c8f46">
-            <ellipse cx="80" cy="2120" rx="30" ry="46"/>
-            <ellipse cx="500" cy="2210" rx="26" ry="40"/>
-          </g>
-          <g fill="#e86fa0">
-            <circle cx="68" cy="2076" r="12"/><circle cx="92" cy="2062" r="10"/><circle cx="84" cy="2092" r="9"/>
-            <circle cx="492" cy="2168" r="11"/><circle cx="512" cy="2154" r="9"/><circle cx="506" cy="2184" r="8"/>
-          </g>
-          <g fill="#f6a8c8">
-            <circle cx="78" cy="2068" r="6"/><circle cx="90" cy="2084" r="5"/>
-            <circle cx="500" cy="2160" r="5"/><circle cx="510" cy="2176" r="4"/>
-          </g>
-        </g>
-      </g>
-    </svg>
+    <img class="scene-bg forest-bg" src="assets/img/bg-forest-swamp.png" alt="">
 
     <!-- mushrooms on trunk (above water, left-center) -->
     <img src="assets/img/prop-mushrooms.png" alt="" class="sprite s-mushrooms">
@@ -329,6 +133,11 @@
       <!-- crocodile in the water -->
       <img src="assets/img/animal-crocodile.png" alt="" class="sprite animal a-croc">
 
+      <!-- swamp props -->
+      <img src="assets/img/prop-lilypads.png" alt="" class="sprite" style="left:46%;top:70%;width:150px;opacity:.95">
+      <img src="assets/img/prop-reeds.png" alt="" class="sprite" style="right:3%;top:72%;width:110px">
+      <img src="assets/img/prop-flower-bush.png" alt="" class="sprite" style="left:2%;top:78%;width:110px">
+
       <!-- dragonflies -->
       <svg class="sprite a-dragonfly d1" viewBox="0 0 80 50" aria-hidden="true">
         <line x1="20" y1="30" x2="66" y2="26" stroke="#1d7a8c" stroke-width="4" stroke-linecap="round"/>
@@ -347,68 +156,7 @@
 
   <!-- ============ PROTECT NATURE ============ -->
   <section class="sec sec-protect" id="protect">
-    <svg class="scene-bg protect-bg" viewBox="0 0 1600 1400" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="protectWater" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#2fb5a4"/>
-          <stop offset="1" stop-color="#3cc9b3"/>
-        </linearGradient>
-      </defs>
-      <rect width="1600" height="1400" fill="url(#protectWater)"/>
-      <!-- water streaks -->
-      <g fill="#67dcc8" opacity="0.55">
-        <rect x="180" y="120" width="240" height="11" rx="5"/>
-        <rect x="760" y="80" width="200" height="10" rx="5"/>
-        <rect x="1240" y="160" width="220" height="10" rx="5"/>
-        <rect x="430" y="320" width="260" height="11" rx="5"/>
-        <rect x="1000" y="380" width="240" height="10" rx="5"/>
-        <rect x="120" y="520" width="210" height="10" rx="5"/>
-        <rect x="700" y="600" width="260" height="11" rx="5"/>
-        <rect x="1300" y="560" width="190" height="9" rx="4"/>
-        <rect x="320" y="760" width="230" height="10" rx="5"/>
-        <rect x="950" y="820" width="210" height="10" rx="5"/>
-      </g>
-      <!-- top-left rocky outcrop with frog -->
-      <g>
-        <path d="M-20 0 L 420 0 Q 470 30 440 80 Q 380 130 260 120 Q 120 116 40 150 L -20 160 Z" fill="#6a9a4e"/>
-        <path d="M-20 0 L 360 0 Q 400 24 376 60 Q 320 100 220 92 Q 100 88 30 116 L -20 124 Z" fill="#7fb35c"/>
-        <ellipse cx="300" cy="120" rx="90" ry="26" fill="#8a8f86"/>
-        <ellipse cx="300" cy="112" rx="74" ry="20" fill="#a8ada3"/>
-      </g>
-      <!-- top-right grassy ledge -->
-      <path d="M1600 0 L 1180 0 Q 1130 26 1166 66 Q 1230 110 1360 100 Q 1500 94 1600 120 Z" fill="#6a9a4e"/>
-      <path d="M1600 0 L 1260 0 Q 1224 22 1252 52 Q 1310 86 1420 80 Q 1530 76 1600 96 Z" fill="#7fb35c"/>
-      <!-- lily pads -->
-      <g>
-        <ellipse cx="560" cy="430" rx="46" ry="16" fill="#57c46b"/>
-        <ellipse cx="640" cy="470" rx="30" ry="11" fill="#46b35c"/>
-        <ellipse cx="1180" cy="700" rx="48" ry="17" fill="#57c46b"/>
-        <ellipse cx="1260" cy="740" rx="30" ry="11" fill="#46b35c"/>
-        <ellipse cx="220" cy="860" rx="44" ry="15" fill="#57c46b"/>
-        <circle cx="1180" cy="688" r="10" fill="#f2a0c2"/><circle cx="1180" cy="684" r="5.5" fill="#fbd0e2"/>
-        <circle cx="560" cy="420" r="9" fill="#f2a0c2"/><circle cx="560" cy="416" r="5" fill="#fbd0e2"/>
-      </g>
-      <!-- reeds clusters -->
-      <g stroke="#2e7a4f" stroke-width="7" stroke-linecap="round" fill="none">
-        <path d="M110 600 q -8 -100 8 -170"/><path d="M146 610 q 10 -90 -4 -160"/><path d="M180 600 q -6 -80 6 -140"/>
-        <path d="M1480 880 q -8 -96 8 -160"/><path d="M1516 890 q 10 -84 -4 -150"/>
-      </g>
-      <g fill="#8a5a2b">
-        <rect x="112" y="395" width="14" height="46" rx="7"/>
-        <rect x="146" y="420" width="13" height="42" rx="6"/>
-        <rect x="1482" y="690" width="14" height="44" rx="7"/>
-      </g>
-      <!-- grassy foreground hills (transition to savanna) -->
-      <path d="M0 1110 Q 240 1040 520 1078 Q 820 1118 1100 1072 Q 1380 1030 1600 1086 L 1600 1400 L 0 1400 Z" fill="#74b54a"/>
-      <path d="M0 1190 Q 280 1130 580 1166 Q 880 1200 1180 1160 Q 1420 1130 1600 1170 L 1600 1400 L 0 1400 Z" fill="#5da23c"/>
-      <g stroke="#4c8f30" stroke-width="6" stroke-linecap="round" fill="none">
-        <path d="M260 1078 q -6 -40 6 -62"/><path d="M292 1074 q 8 -36 0 -56"/>
-        <path d="M760 1102 q -6 -38 6 -58"/><path d="M790 1106 q 8 -32 2 -52"/>
-        <path d="M1220 1062 q -6 -36 6 -56"/><path d="M1250 1058 q 8 -32 0 -52"/>
-      </g>
-      <!-- tiger grass mound right -->
-      <path d="M1020 1400 Q 1030 1190 1160 1136 Q 1300 1080 1450 1130 Q 1580 1176 1600 1400 Z" fill="#67ab41"/>
-    </svg>
+    <img class="scene-bg protect-bg" src="assets/img/bg-lake-meadow.png" alt="">
 
     <!-- frog on the rock -->
     <img src="assets/img/animal-frog.png" alt="" class="sprite animal a-frog">
@@ -437,69 +185,7 @@
 
   <!-- ============ SAVANNA / CONSERVATION ============ -->
   <section class="sec sec-savanna" id="conservation">
-    <svg class="scene-bg savanna-bg" viewBox="0 0 1600 1500" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="sandGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#f0a23a"/>
-          <stop offset="0.55" stop-color="#eda035"/>
-          <stop offset="1" stop-color="#f2ae3f"/>
-        </linearGradient>
-      </defs>
-      <rect width="1600" height="1500" fill="url(#sandGrad)"/>
-      <!-- green grass tongue from previous section -->
-      <path d="M0 0 L 1600 0 L 1600 60 Q 1380 130 1080 96 Q 760 60 480 110 Q 220 156 0 110 Z" fill="#5da23c"/>
-      <path d="M0 0 L 1600 0 L 1600 30 Q 1400 86 1120 60 Q 800 30 520 72 Q 240 110 0 70 Z" fill="#74b54a"/>
-      <path d="M210 116 Q 460 70 760 92 Q 720 130 560 140 Q 380 150 210 116 Z" fill="#67ab41" opacity="0.7"/>
-      <!-- sand texture patches -->
-      <g fill="#e2912a" opacity="0.6">
-        <ellipse cx="320" cy="420" rx="160" ry="22"/>
-        <ellipse cx="1120" cy="380" rx="190" ry="24"/>
-        <ellipse cx="700" cy="640" rx="170" ry="20"/>
-        <ellipse cx="1380" cy="700" rx="150" ry="20"/>
-        <ellipse cx="240" cy="860" rx="170" ry="22"/>
-        <ellipse cx="900" cy="1000" rx="200" ry="24"/>
-        <ellipse cx="420" cy="1200" rx="180" ry="22"/>
-        <ellipse cx="1300" cy="1240" rx="170" ry="20"/>
-      </g>
-      <g fill="#f6bc55" opacity="0.8">
-        <ellipse cx="560" cy="500" rx="120" ry="14"/>
-        <ellipse cx="1240" cy="540" rx="130" ry="15"/>
-        <ellipse cx="180" cy="700" rx="110" ry="13"/>
-        <ellipse cx="1050" cy="820" rx="140" ry="15"/>
-        <ellipse cx="640" cy="1120" rx="130" ry="14"/>
-      </g>
-      <!-- dry golden grass tufts -->
-      <g stroke="#c87f2a" stroke-width="6" stroke-linecap="round" fill="none">
-        <path d="M150 460 q -8 -64 8 -104 M178 462 q 10 -56 -2 -96 M206 458 q -6 -48 8 -84"/>
-        <path d="M1430 420 q -8 -60 8 -100 M1458 424 q 10 -54 -2 -92"/>
-        <path d="M860 540 q -8 -56 8 -92 M888 544 q 10 -48 -2 -84"/>
-        <path d="M330 1010 q -8 -60 8 -100 M358 1014 q 10 -52 -2 -90"/>
-        <path d="M1180 980 q -8 -56 8 -94 M1208 984 q 10 -50 -2 -86"/>
-        <path d="M540 1330 q -8 -58 8 -96 M568 1334 q 10 -50 -2 -88"/>
-        <path d="M1460 1140 q -8 -54 8 -90 M1488 1144 q 10 -46 -2 -82"/>
-      </g>
-      <g fill="#b5722f">
-        <ellipse cx="158" cy="350" rx="7" ry="18"/><ellipse cx="186" cy="362" rx="6" ry="16"/>
-        <ellipse cx="1438" cy="316" rx="7" ry="17"/>
-        <ellipse cx="868" cy="444" rx="6" ry="15"/>
-        <ellipse cx="338" cy="906" rx="7" ry="17"/>
-        <ellipse cx="1188" cy="886" rx="6" ry="16"/>
-        <ellipse cx="548" cy="1230" rx="7" ry="16"/>
-      </g>
-      <!-- rocks -->
-      <g>
-        <path d="M1080 270 l 30 -34 l 38 10 l 16 26 Z" fill="#9aa0a6"/>
-        <path d="M1080 270 l 30 -34 l 14 36 Z" fill="#b8bdc2"/>
-        <path d="M250 1140 l 24 -28 l 32 8 l 12 22 Z" fill="#9aa0a6"/>
-        <path d="M1340 880 l 20 -22 l 26 6 l 10 18 Z" fill="#9aa0a6"/>
-      </g>
-      <!-- lion rock slabs -->
-      <g>
-        <path d="M30 560 L 380 560 L 420 600 L 360 640 L 60 640 L 10 600 Z" fill="#a8ada3"/>
-        <path d="M30 560 L 380 560 L 400 580 L 50 584 Z" fill="#c2c7bd"/>
-        <path d="M90 640 L 330 640 L 360 676 L 70 676 Z" fill="#8a8f86"/>
-      </g>
-    </svg>
+    <img class="scene-bg savanna-bg" src="assets/img/bg-savanna.png" alt="">
 
     <!-- butterfly -->
     <svg class="sprite a-butterfly" viewBox="0 0 70 60" aria-hidden="true">
@@ -528,35 +214,7 @@
 
   <!-- ============ PRICING / BEACH ============ -->
   <section class="sec sec-pricing" id="pricing">
-    <svg class="scene-bg beach-bg" viewBox="0 0 1600 1100" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="beachGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#f2ae3f"/>
-          <stop offset="0.5" stop-color="#f5bf4e"/>
-          <stop offset="1" stop-color="#f7ca5a"/>
-        </linearGradient>
-      </defs>
-      <rect width="1600" height="1100" fill="url(#beachGrad)"/>
-      <g fill="#e8a232" opacity="0.55">
-        <path d="M0 240 Q 300 200 640 232 Q 980 264 1320 228 Q 1480 212 1600 230 L 1600 280 Q 1300 310 960 282 Q 600 254 280 288 Q 120 302 0 290 Z"/>
-        <path d="M0 560 Q 340 520 700 552 Q 1060 584 1400 548 L 1600 540 L 1600 600 Q 1260 640 900 608 Q 540 580 200 612 L 0 620 Z"/>
-      </g>
-      <!-- dry beach bush -->
-      <ellipse cx="1432" cy="208" rx="64" ry="14" fill="#e2912a" opacity="0.8"/>
-      <ellipse cx="146" cy="368" rx="46" ry="11" fill="#e2912a" opacity="0.8"/>
-      <g stroke="#c87f2a" stroke-width="6" stroke-linecap="round" fill="none">
-        <path d="M1400 200 q -10 -70 10 -120 M1432 204 q 12 -64 -4 -110 M1464 198 q -8 -56 10 -96"/>
-        <path d="M130 360 q -8 -56 8 -94 M158 364 q 10 -48 -2 -84"/>
-      </g>
-      <!-- starfish + shells -->
-      <g>
-        <path d="M120 760 l 9 18 20 2 -15 14 4 20 -18 -10 -18 10 4 -20 -15 -14 20 -2 Z" fill="#e2703a"/>
-        <path d="M1480 700 l 8 16 18 2 -13 12 3 18 -16 -9 -16 9 3 -18 -13 -12 18 -2 Z" fill="#d6604a"/>
-        <path d="M1320 420 a 16 16 0 0 1 32 0 q -16 14 -32 0 Z" fill="#f3e3c2"/>
-        <path d="M240 560 a 14 14 0 0 1 28 0 q -14 12 -28 0 Z" fill="#eed6ae"/>
-        <circle cx="980" cy="700" r="9" fill="#eed6ae"/>
-      </g>
-    </svg>
+    <img class="scene-bg beach-bg" src="assets/img/bg-beach.png" alt="">
 
     <div class="pricing-head">
       <h2 class="big-title brown" data-letters>VSTUPNÉ A OTEVÍRACÍ DOBA</h2>
@@ -632,38 +290,7 @@
 
   <!-- ============ THINGS TO DO / UNDERWATER ============ -->
   <section class="sec sec-things" id="things">
-    <svg class="scene-bg things-bg" viewBox="0 0 1600 1500" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="seaGrad1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#2bbfa4"/>
-          <stop offset="1" stop-color="#1ba88e"/>
-        </linearGradient>
-        <linearGradient id="seaRay" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
-          <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-        </linearGradient>
-      </defs>
-      <rect width="1600" height="1500" fill="url(#seaGrad1)"/>
-      <g>
-        <polygon points="180,-20 320,-20 660,1100 480,1100" fill="url(#seaRay)"/>
-        <polygon points="560,-20 660,-20 1060,1000 930,1000" fill="url(#seaRay)" opacity="0.8"/>
-        <polygon points="1040,-20 1130,-20 1480,900 1370,900" fill="url(#seaRay)" opacity="0.7"/>
-        <polygon points="1380,-20 1450,-20 1640,560 1560,560" fill="url(#seaRay)" opacity="0.6"/>
-      </g>
-      <!-- rocky ledge bottom right with corals -->
-      <g>
-        <path d="M1600 1500 L 1600 1150 Q 1500 1120 1420 1160 Q 1330 1200 1280 1300 Q 1240 1400 1260 1500 Z" fill="#15816d"/>
-        <path d="M1600 1500 L 1600 1250 Q 1520 1230 1460 1270 Q 1390 1320 1360 1400 Q 1340 1460 1350 1500 Z" fill="#0f6e5d"/>
-        <g stroke="#3f8f5a" stroke-width="8" stroke-linecap="round" fill="none">
-          <path d="M1430 1160 q -10 -70 12 -120 M1470 1156 q 14 -60 -4 -108"/>
-        </g>
-        <g fill="#d4574e">
-          <rect x="1500" y="1160" width="18" height="56" rx="9"/>
-          <rect x="1524" y="1140" width="18" height="76" rx="9"/>
-          <rect x="1548" y="1156" width="18" height="60" rx="9"/>
-        </g>
-      </g>
-    </svg>
+    <img class="scene-bg things-bg" src="assets/img/bg-underwater-light.png" alt="">
 
     <div class="things-head">
       <h2 class="big-title white" data-letters>ZÁŽITKY V ZOO</h2>
@@ -713,37 +340,7 @@
 
   <!-- ============ TESTIMONIALS ============ -->
   <section class="sec sec-love" id="testimonials">
-    <svg class="scene-bg love-bg" viewBox="0 0 1600 1600" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="seaGrad2" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#1ba88e"/>
-          <stop offset="1" stop-color="#149280"/>
-        </linearGradient>
-      </defs>
-      <rect width="1600" height="1600" fill="url(#seaGrad2)"/>
-      <g>
-        <polygon points="280,-20 400,-20 700,700 560,700" fill="url(#seaRay)" opacity="0.5"/>
-        <polygon points="900,-20 990,-20 1280,600 1170,600" fill="url(#seaRay)" opacity="0.4"/>
-      </g>
-      <!-- distant whale silhouette -->
-      <path d="M40 1430 C 90 1380 190 1360 280 1380 C 330 1392 360 1416 360 1438 C 300 1452 180 1456 100 1446 C 70 1462 50 1474 30 1478 C 36 1462 38 1446 40 1430 Z" fill="#0e7f6d" opacity="0.7"/>
-      <path d="M268 1372 C 274 1352 290 1340 308 1340 C 298 1356 296 1368 298 1382 Z" fill="#0e7f6d" opacity="0.7"/>
-      <!-- rocky seafloor -->
-      <path d="M0 1600 L 0 1480 Q 120 1430 260 1460 Q 400 1490 520 1470 Q 660 1446 800 1480 Q 960 1516 1120 1490 Q 1300 1460 1440 1500 Q 1540 1526 1600 1510 L 1600 1600 Z" fill="#0d6f5f"/>
-      <!-- corals on floor -->
-      <g fill="#d4574e">
-        <rect x="180" y="1420" width="16" height="52" rx="8"/>
-        <rect x="202" y="1402" width="16" height="70" rx="8"/>
-        <rect x="224" y="1416" width="16" height="56" rx="8"/>
-      </g>
-      <g stroke="#3f8f5a" stroke-width="7" stroke-linecap="round" fill="none">
-        <path d="M1240 1480 q -10 -64 12 -110 M1278 1476 q 14 -56 -4 -100"/>
-        <path d="M700 1460 q -8 -56 10 -96"/>
-      </g>
-      <g fill="#e08a3c">
-        <circle cx="940" cy="1492" r="16"/><circle cx="966" cy="1482" r="12"/><circle cx="918" cy="1482" r="11"/>
-      </g>
-    </svg>
+    <img class="scene-bg love-bg" src="assets/img/bg-underwater-deep.png" alt="">
 
     <div class="love-head">
       <h2 class="big-title white"><span data-letters>LIDÉ NÁS</span> <span data-letters>MILUJÍ!</span></h2>
@@ -796,6 +393,10 @@
       </article>
     </div>
 
+    <!-- corals -->
+    <img src="assets/img/prop-coral-cluster.png" alt="" class="sprite" style="left:4%;top:88%;width:220px">
+    <img src="assets/img/prop-coral-small.png" alt="" class="sprite" style="left:46%;top:92%;width:120px">
+
     <!-- jellyfish -->
     <svg class="sprite a-jelly j1" viewBox="0 0 120 160" aria-hidden="true">
       <path d="M20 62 A 40 40 0 0 1 100 62 Q 100 76 60 76 Q 20 76 20 62 Z" fill="#f4aac8" opacity="0.85"/>
@@ -832,39 +433,7 @@
 
   <!-- ============ CTA + FOOTER ============ -->
   <section class="sec sec-deep" id="discover">
-    <svg class="scene-bg deep-bg" viewBox="0 0 1600 1300" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="seaGrad3" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#149280"/>
-          <stop offset="1" stop-color="#0d7a6b"/>
-        </linearGradient>
-      </defs>
-      <rect width="1600" height="1300" fill="url(#seaGrad3)"/>
-      <!-- rocky ridge -->
-      <path d="M0 560 L 0 430 Q 90 380 180 420 L 260 380 Q 360 350 440 410 Q 540 470 660 440 Q 800 405 920 450 Q 1060 500 1200 460 Q 1340 420 1460 470 Q 1540 502 1600 480 L 1600 620 Q 1200 700 800 660 Q 400 620 0 660 Z" fill="#0e8170" opacity="0.85"/>
-      <path d="M0 1300 L 0 540 Q 120 500 240 540 Q 320 566 380 540 Q 420 590 380 650 Q 320 730 360 800 Q 200 840 80 800 Q 30 786 0 796 Z" fill="#0b6e5f" opacity="0.6"/>
-      <!-- floor -->
-      <path d="M0 1300 L 0 1190 Q 200 1140 420 1170 Q 660 1204 880 1170 Q 1120 1136 1320 1176 Q 1480 1206 1600 1186 L 1600 1300 Z" fill="#0a6354"/>
-      <!-- kelp + corals -->
-      <g stroke="#2f8a5a" stroke-width="9" stroke-linecap="round" fill="none">
-        <path d="M1090 1180 C 1070 1100 1100 1030 1080 950 M1130 1184 C 1150 1100 1120 1040 1140 960"/>
-        <path d="M300 1180 C 284 1120 304 1070 290 1010"/>
-      </g>
-      <g fill="#d4574e">
-        <rect x="1280" y="1080" width="22" height="100" rx="11"/>
-        <rect x="1310" y="1050" width="22" height="130" rx="11"/>
-        <rect x="1340" y="1072" width="22" height="108" rx="11"/>
-        <rect x="1370" y="1094" width="20" height="86" rx="10"/>
-        <ellipse cx="1284" cy="1078" rx="9" ry="6" fill="#b03e36"/>
-        <ellipse cx="1314" cy="1048" rx="9" ry="6" fill="#b03e36"/>
-        <ellipse cx="1344" cy="1070" rx="9" ry="6" fill="#b03e36"/>
-      </g>
-      <g fill="#e08a3c">
-        <circle cx="1450" cy="1160" r="20"/><circle cx="1482" cy="1148" r="15"/><circle cx="1424" cy="1148" r="13"/>
-      </g>
-      <ellipse cx="640" cy="1190" rx="90" ry="14" fill="#085546" opacity="0.6"/>
-      <ellipse cx="1330" cy="1196" rx="120" ry="16" fill="#085546" opacity="0.6"/>
-    </svg>
+    <img class="scene-bg deep-bg" src="assets/img/bg-underwater-deep2.png" alt="">
 
     <!-- fish -->
     <img src="assets/img/fish-blue-tang.png" alt="" class="sprite animal a-bluetang">
@@ -881,6 +450,8 @@
     <svg class="sprite a-smallfish sf5" viewBox="0 0 60 30" aria-hidden="true">
       <path d="M8 15 L 20 7 L 20 23 Z" fill="#cfe9ec"/><ellipse cx="34" cy="15" rx="18" ry="10" fill="#e6f4f5"/><circle cx="42" cy="12" r="2" fill="#26222e"/>
     </svg>
+
+    <img src="assets/img/prop-coral-cluster.png" alt="" class="sprite" style="right:5%;bottom:30%;width:260px;z-index:5">
 
     <div class="cta-block">
       <h2 class="big-title white cta-title" data-letters-lines>OBJEVTE KRÁSU
