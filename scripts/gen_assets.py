@@ -112,12 +112,12 @@ ASSETS = [
 ]
 
 
-def call_model(model, prompt, aspect):
+def call_model(model, prompt, aspect, size="1K"):
     body = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "responseModalities": ["IMAGE"],
-            "imageConfig": {"aspectRatio": aspect, "imageSize": "1K"},
+            "imageConfig": {"aspectRatio": aspect, "imageSize": size},
         },
     }
     req = urllib.request.Request(
