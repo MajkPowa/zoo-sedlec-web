@@ -57,6 +57,12 @@ ASSETS = [
     ("el-outcrop", "4:3", "green",
      "Grassy rocky outcrop ledge seen from the side: layered green grass shelf with a large flat smooth "
      "grey stone slab on top and a couple of smaller stones, designed as a corner element"),
+    ("el-ledge", "4:3", "magenta",
+     "Corner scenery element for the top-left corner of a scene: a lush green grassy bank ledge with one "
+     "large flat smooth grey stone resting on it, the grass mass is CUT OFF by the top edge and the left "
+     "edge of the canvas as if it continues beyond the image, only the bottom side and right side have an "
+     "organic wavy grass outline with a few hanging grass tufts, magenta background visible only in the "
+     "bottom right area"),
     # --- savanna ---
     ("el-rockslab", "3:2", "magenta",
      "Group of flat grey rock slabs stacked low on sandy ground, smooth rounded stone shapes in two grey "

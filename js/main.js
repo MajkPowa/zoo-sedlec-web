@@ -493,6 +493,41 @@ spawnBubbles(".sec-things", 16);
 spawnBubbles(".sec-love", 16);
 spawnBubbles(".sec-deep", 12);
 
+/* ---------- scroll & lock: viewport glides onto section starts ---------- */
+
+const snapSections = gsap.utils.toArray(
+  ".sec-hero,.sec-sanctuary,.sec-protect,.sec-savanna,.sec-pricing,.sec-things,.sec-love,.sec-deep"
+);
+let snapPts = [];
+function computeSnapPts() {
+  const max = ScrollTrigger.maxScroll(window);
+  snapPts = snapSections.map((s) => (s.getBoundingClientRect().top + window.scrollY) / max);
+}
+computeSnapPts();
+ScrollTrigger.addEventListener("refresh", computeSnapPts);
+
+ScrollTrigger.create({
+  trigger: document.body,
+  start: 0,
+  end: "max",
+  snap: {
+    snapTo: (progress) => {
+      const max = ScrollTrigger.maxScroll(window);
+      // lock whenever a section boundary is within ~42 % of the viewport height
+      let best = progress;
+      let bestD = (window.innerHeight * 0.42) / max;
+      for (const pt of snapPts) {
+        const d = Math.abs(pt - progress);
+        if (d < bestD) { bestD = d; best = pt; }
+      }
+      return best;
+    },
+    duration: { min: 0.35, max: 0.9 },
+    delay: 0.1,
+    ease: "power2.inOut",
+  },
+});
+
 /* ---------- nav active state ---------- */
 
 const navLinks = document.querySelectorAll(".main-nav a");

@@ -54,6 +54,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .water-top{position:absolute;left:0;right:0;top:-24px;width:100%;height:25px}
 /* lake / protect */
 .pz{background:linear-gradient(180deg,#2fb5a4 0%,#3cc9b3 65%,#3cc9b3 100%)}
+.pz-ledge-l{left:0;top:0;width:24%}
+.pz-ledge-r{right:0;top:0;width:19%}
 /* savanna */
 .sz{background:linear-gradient(180deg,#f0a23a 0%,#eda035 55%,#f2ae3f 100%)}
 .sz-grass{position:absolute;top:-2px;left:0;width:100%;height:12%}
@@ -236,7 +238,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 
 /* ============ PROTECT ============ */
 .sec-protect{height:130vh}
-.a-frog{left:14%;top:4.5%;width:115px}
+.a-frog{left:5%;top:2%;width:110px}
 .a-flam1{left:62%;top:22%;width:155px;z-index:8}
 .a-flam2{left:69.5%;top:27%;width:145px;z-index:8}
 .a-bird2{left:6.5%;top:27%;width:92px}
@@ -585,9 +587,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   .a-deer{width:185px}
   .a-croc{width:225px;right:8%}
   .s-mushrooms{width:85px}
-  .a-frog{width:82px}
-  .a-flam1{width:110px}
-  .a-flam2{width:100px;left:72%}
+  .a-frog{width:74px;left:7%;top:2.5%}
+  .a-flam1{width:108px;left:50%;top:57%}
+  .a-flam2{width:98px;left:74%;top:61%}
+  .a-bird2{display:none}
+  .pz-ledge-l{width:44%}
+  .pz-ledge-r{width:36%}
+  .sec-protect .card-protect{margin-top:26vh}
   .a-tiger{width:200px}
   .a-turtle{width:220px}
   .a-lion{width:280px;top:26%}
