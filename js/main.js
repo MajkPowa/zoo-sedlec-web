@@ -403,7 +403,7 @@ gsap.to(".a-moorish", {
   [".a-bluetang", -150, 40],
   [".a-lionfish", 120, -30],
   [".a-spotfish", -110, 30],
-  [".a-wrasse", 140, -40],
+  [".a-wrasse", -140, -40],
 ].forEach(([sel, dx, dy]) => {
   gsap.to(sel, {
     x: dx,
