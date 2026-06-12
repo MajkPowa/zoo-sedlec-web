@@ -313,32 +313,24 @@ gsap.fromTo(
     scrollTrigger: { trigger: ".sec-pricing", start: "top 60%", end: "bottom 70%", scrub: true },
   }
 );
-// the tide breathes vertically — the wave rolls up the beach and recedes
-gsap.to(".sea-edge .tide", {
-  y: -18,
+// the foam edge rolls up the beach and recedes (deep water stays put)
+gsap.to(".sea-foam .fm", {
+  y: -10,
   yoyo: true,
   repeat: -1,
-  duration: 3.4,
+  duration: 3.2,
   ease: "sine.inOut",
 });
-// inner water layers follow with a slight phase shift for depth
-gsap.to(".sea-foam .w1", {
-  y: -9,
+// wet sand follows with its own slower rhythm
+gsap.to(".sea-foam .ws", {
+  y: -7,
   yoyo: true,
   repeat: -1,
-  duration: 3.4,
-  delay: 0.35,
+  duration: 4.2,
+  delay: 0.5,
   ease: "sine.inOut",
 });
-gsap.to(".sea-foam .w2", {
-  y: -12,
-  yoyo: true,
-  repeat: -1,
-  duration: 4.1,
-  delay: 0.6,
-  ease: "sine.inOut",
-});
-// barely-there lateral sway
+// barely-there lateral sway of the whole surf
 gsap.to(".sea-foam", {
   x: -10,
   yoyo: true,

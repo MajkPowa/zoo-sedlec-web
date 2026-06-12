@@ -450,14 +450,32 @@
           <defs>
             <path id="waveE" d="M0 92 Q 60 62 130 84 Q 200 106 270 80 Q 340 56 410 86 Q 480 112 560 84 Q 630 60 700 88 Q 770 112 850 82 Q 920 54 990 84 Q 1060 110 1140 84 Q 1210 60 1280 90 Q 1350 114 1430 82 Q 1500 58 1600 88 L 1600 260 L 0 260 Z"/>
           </defs>
-          <!-- wet sand peeking above the foam -->
-          <use href="#waveE" fill="#dd9928" opacity="0.5" transform="translate(0,-22)"/>
-          <!-- thick white foam band -->
-          <use href="#waveE" fill="#ffffff"/>
-          <!-- shallow bright water -->
-          <use href="#waveE" class="w1" fill="#3fd0bb" transform="translate(0,28)"/>
-          <!-- deeper water layer -->
-          <path class="w2" d="M0 190 Q 200 170 400 184 T 800 178 T 1200 174 T 1600 182 L 1600 260 L 0 260 Z" fill="#2bbfa4"/>
+          <!-- wet sand peeking above the foam (animated) -->
+          <g class="ws"><use href="#waveE" fill="#dd9928" opacity="0.5" transform="translate(0,-20)"/></g>
+          <!-- thick white foam + shallow water edge (animated together = constant band) -->
+          <g class="fm"><use href="#waveE" fill="#ffffff"/></g>
+          <g class="fm"><use href="#waveE" fill="#3fd0bb" transform="translate(0,26)"/></g>
+          <!-- mid water tone (static) -->
+          <path d="M0 152 Q 200 138 400 150 T 800 144 T 1200 148 T 1600 142 L 1600 260 L 0 260 Z" fill="#35c7ae"/>
+          <!-- deep water (static — seals the section bottom, no gap possible) -->
+          <path d="M0 196 Q 200 178 400 190 T 800 184 T 1200 180 T 1600 188 L 1600 260 L 0 260 Z" fill="#2bbfa4"/>
+          <!-- foam remnants drifting on the shallow water -->
+          <g class="ws" fill="#ffffff" opacity="0.45">
+            <path d="M210 124 q 45 -9 100 0 q -45 9 -100 0 Z"/>
+            <path d="M640 132 q 40 -8 90 0 q -40 8 -90 0 Z"/>
+            <path d="M1080 122 q 45 -9 100 0 q -45 9 -100 0 Z"/>
+            <path d="M1420 134 q 35 -7 80 0 q -35 7 -80 0 Z"/>
+          </g>
+          <!-- subtle highlights on the open water -->
+          <g fill="#ffffff" opacity="0.2">
+            <path d="M100 168 q 70 -10 150 0 q -70 10 -150 0 Z"/>
+            <path d="M520 176 q 80 -11 170 0 q -80 11 -170 0 Z"/>
+            <path d="M960 164 q 70 -10 150 0 q -70 10 -150 0 Z"/>
+            <path d="M1310 178 q 60 -9 130 0 q -60 9 -130 0 Z"/>
+            <path d="M300 214 q 80 -10 170 0 q -80 10 -170 0 Z"/>
+            <path d="M820 222 q 90 -11 190 0 q -90 11 -190 0 Z"/>
+            <path d="M1280 216 q 70 -9 150 0 q -70 9 -150 0 Z"/>
+          </g>
         </svg>
       </div>
     </div>
@@ -467,15 +485,11 @@
   <section class="sec sec-things" id="things">
     <div class="scene tz" aria-hidden="true">
       <!-- sea surface seen from below: sand stripe + white waterline -->
-      <svg class="tz-surface" viewBox="0 0 1600 64" preserveAspectRatio="none">
+      <svg class="tz-surface" viewBox="0 0 1600 26" preserveAspectRatio="none">
         <!-- darker depth band bridging from the sea above -->
-        <rect width="1600" height="16" fill="#22ab94"/>
-        <path d="M0 14 Q 200 8 400 13 T 800 11 T 1200 13 T 1600 10 L 1600 18 L 0 18 Z" fill="#1ea38c"/>
-        <!-- sand bar seen at the waterline -->
-        <rect y="16" width="1600" height="26" fill="#f6c34c"/>
-        <g transform="translate(0,21)">
-          <path d="M0 20 Q 100 14 200 19 T 400 18 T 600 20 T 800 16 T 1000 19 T 1200 15 T 1400 19 T 1600 17 L 1600 30 Q 1500 34 1400 30 T 1200 28 T 1000 31 T 800 27 T 600 30 T 400 26 T 200 30 T 0 27 Z" fill="#ffffff" opacity="0.92"/>
-        </g>
+        <rect width="1600" height="14" fill="#1ea38c"/>
+        <!-- thin sand bar at the waterline -->
+        <rect y="14" width="1600" height="12" fill="#f6c34c"/>
       </svg>
       <svg class="tz-rays" viewBox="0 0 1600 1500" preserveAspectRatio="none">
         <defs>
