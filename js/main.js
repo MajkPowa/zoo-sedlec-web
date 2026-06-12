@@ -308,7 +308,7 @@ gsap.fromTo(
   ".sea-edge",
   { yPercent: 36 },
   {
-    yPercent: -6,
+    yPercent: 0,
     ease: "none",
     scrollTrigger: { trigger: ".sec-pricing", start: "top 60%", end: "bottom 70%", scrub: true },
   }

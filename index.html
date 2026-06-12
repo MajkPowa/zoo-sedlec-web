@@ -458,8 +458,6 @@
           <use href="#waveE" class="w1" fill="#3fd0bb" transform="translate(0,28)"/>
           <!-- deeper water layer -->
           <path class="w2" d="M0 190 Q 200 170 400 184 T 800 178 T 1200 174 T 1600 182 L 1600 260 L 0 260 Z" fill="#2bbfa4"/>
-          <!-- deepest band -->
-          <path class="w3" d="M0 232 Q 260 222 520 230 T 1040 228 T 1600 230 L 1600 260 L 0 260 Z" fill="#23ad97"/>
         </svg>
       </div>
     </div>
@@ -469,9 +467,13 @@
   <section class="sec sec-things" id="things">
     <div class="scene tz" aria-hidden="true">
       <!-- sea surface seen from below: sand stripe + white waterline -->
-      <svg class="tz-surface" viewBox="0 0 1600 52" preserveAspectRatio="none">
-        <rect width="1600" height="27" fill="#f6c34c"/>
-        <g transform="translate(0,7)">
+      <svg class="tz-surface" viewBox="0 0 1600 64" preserveAspectRatio="none">
+        <!-- darker depth band bridging from the sea above -->
+        <rect width="1600" height="16" fill="#22ab94"/>
+        <path d="M0 14 Q 200 8 400 13 T 800 11 T 1200 13 T 1600 10 L 1600 18 L 0 18 Z" fill="#1ea38c"/>
+        <!-- sand bar seen at the waterline -->
+        <rect y="16" width="1600" height="26" fill="#f6c34c"/>
+        <g transform="translate(0,21)">
           <path d="M0 20 Q 100 14 200 19 T 400 18 T 600 20 T 800 16 T 1000 19 T 1200 15 T 1400 19 T 1600 17 L 1600 30 Q 1500 34 1400 30 T 1200 28 T 1000 31 T 800 27 T 600 30 T 400 26 T 200 30 T 0 27 Z" fill="#ffffff" opacity="0.92"/>
         </g>
       </svg>
