@@ -27,6 +27,48 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .sprite{position:absolute}
 .animal{will-change:transform}
 
+/* ---- layered scene compositions ---- */
+.scene{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.scene img{position:absolute}
+.scene .flip{transform:scaleX(-1)}
+.streak{
+  position:absolute;height:9px;border-radius:5px;
+  background:rgba(126,236,216,.5);
+}
+/* forest zone */
+.fz{background:linear-gradient(180deg,#0c2336 0%,#11364a 26%,#175547 46%,#1c6b55 60.5%,#2fb5a4 61%,#2fb5a4 100%)}
+.trunk{top:-1.5%;height:63.5%;object-fit:fill}
+.trunk.back{opacity:.82;filter:brightness(1.14) saturate(.85)}
+.trunk.back.flip,.trunk.flip{transform:scaleX(-1)}
+.trunk.front{top:-1%;height:65%}
+.vine{top:0}
+.fz-rays{position:absolute;top:0;left:0;width:100%;height:60.5%}
+.fz-canopy{
+  position:absolute;top:0;left:0;right:0;height:22%;
+  background:linear-gradient(180deg,rgba(4,16,30,.55),rgba(4,16,30,0));
+}
+.swamp-block{
+  position:absolute;left:0;right:0;top:60.5%;bottom:0;
+  background:linear-gradient(180deg,#41ccb6 0%,#2fb5a4 100%);
+}
+.water-top{position:absolute;left:0;right:0;top:-24px;width:100%;height:25px}
+/* lake / protect */
+.pz{background:linear-gradient(180deg,#2fb5a4 0%,#3cc9b3 65%,#3cc9b3 100%)}
+/* savanna */
+.sz{background:linear-gradient(180deg,#f0a23a 0%,#eda035 55%,#f2ae3f 100%)}
+.sz-grass{position:absolute;top:-2px;left:0;width:100%;height:12%}
+.sz-patches{position:absolute;inset:0;width:100%;height:100%}
+/* beach */
+.bz{background:linear-gradient(180deg,#f2ae3f 0%,#f5bf4e 50%,#f7ca5a 100%)}
+.bz-dunes{position:absolute;inset:0;width:100%;height:100%}
+/* underwater */
+.tz{background:linear-gradient(180deg,#2bbfa4 0%,#1ba88e 100%)}
+.tz-rays{position:absolute;inset:0;width:100%;height:100%}
+.lz{background:linear-gradient(180deg,#1ba88e 0%,#149280 100%)}
+.lz-art{position:absolute;inset:0;width:100%;height:100%}
+.dz{background:linear-gradient(180deg,#149280 0%,#0d7a6b 100%)}
+.dz-art{position:absolute;inset:0;width:100%;height:100%}
+
 /* ============ HEADER ============ */
 .site-header{
   position:absolute;
@@ -154,11 +196,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .sb-btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(82,158,38,.55)}
 
 /* sanctuary sprites */
-.s-mushrooms{left:36.5%;top:52%;width:120px}  /* relative to forest-zone */
+.s-mushrooms{left:42%;top:52.5%;width:115px}  /* relative to forest-zone, on the 41% trunk */
 .a-sloth{left:4%;top:3%;width:330px}
 .a-snake{right:-0.5%;top:1%;width:200px}
 .a-deer{left:5%;top:64%;width:280px}
-.a-croc{right:19%;top:81%;width:320px}
+.a-croc{right:27%;top:81%;width:310px}
 .a-dragonfly{width:64px}
 .d1{left:30%;top:55%}
 .d2{left:58%;top:74%}
@@ -382,7 +424,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .a-bluetang{left:52%;top:9%;width:150px}
 .a-lionfish{left:28%;top:32%;width:185px}
 .a-spotfish{right:10%;top:24%;width:135px}
-.a-wrasse{left:14%;top:47%;width:160px}
+.a-wrasse{left:7%;top:60%;width:160px}
 .sf4{right:22%;top:7%}
 .sf5{right:28%;top:12%}
 .c-deep{right:5%;bottom:30%;width:260px;z-index:5}

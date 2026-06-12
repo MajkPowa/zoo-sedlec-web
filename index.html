@@ -40,7 +40,72 @@
 
   <!-- ============ FOREST ZONE : HERO + SANCTUARY ============ -->
   <div class="forest-zone">
-    <img class="scene-bg forest-bg" src="assets/img/bg-forest-swamp.png" alt="">
+    <div class="scene fz" aria-hidden="true">
+      <!-- back trunks -->
+      <img class="trunk back" src="assets/img/el-trunk-green.png" alt="" style="left:6%;width:68px">
+      <img class="trunk back flip" src="assets/img/el-trunk-teal.png" alt="" style="left:19%;width:58px">
+      <img class="trunk back" src="assets/img/el-trunk-navy.png" alt="" style="left:33%;width:78px">
+      <img class="trunk back flip" src="assets/img/el-trunk-green.png" alt="" style="left:47%;width:62px">
+      <img class="trunk back" src="assets/img/el-trunk-teal.png" alt="" style="left:61%;width:72px">
+      <img class="trunk back flip" src="assets/img/el-trunk-navy.png" alt="" style="left:74%;width:58px">
+      <img class="trunk back" src="assets/img/el-trunk-green.png" alt="" style="left:87%;width:68px">
+      <!-- light rays -->
+      <svg class="fz-rays" viewBox="0 0 1600 1450" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="rayG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#d9ffb0" stop-opacity="0.26"/>
+            <stop offset="1" stop-color="#d9ffb0" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <polygon points="950,-60 1060,-60 700,1450 580,1450" fill="url(#rayG)"/>
+        <polygon points="1200,-60 1280,-60 1000,1200 910,1200" fill="url(#rayG)" opacity="0.8"/>
+        <polygon points="1420,-60 1500,-60 1300,980 1220,980" fill="url(#rayG)" opacity="0.55"/>
+        <polygon points="330,-60 395,-60 215,900 155,900" fill="url(#rayG)" opacity="0.5"/>
+      </svg>
+      <!-- mid trunks -->
+      <img class="trunk" src="assets/img/el-trunk-navy.png" alt="" style="left:1%;width:112px">
+      <img class="trunk flip" src="assets/img/el-trunk-teal.png" alt="" style="left:13%;width:124px">
+      <img class="trunk" src="assets/img/el-trunk-green.png" alt="" style="left:27%;width:100px">
+      <img class="trunk flip" src="assets/img/el-trunk-navy.png" alt="" style="left:41%;width:132px">
+      <img class="trunk" src="assets/img/el-trunk-teal.png" alt="" style="left:56%;width:106px">
+      <img class="trunk flip" src="assets/img/el-trunk-green.png" alt="" style="left:70%;width:126px">
+      <img class="trunk" src="assets/img/el-trunk-navy.png" alt="" style="left:84%;width:110px">
+      <!-- vines -->
+      <img class="vine" src="assets/img/el-vine1.png" alt="" style="left:23%;height:34%">
+      <img class="vine flip" src="assets/img/el-vine2.png" alt="" style="left:57%;height:28%">
+      <img class="vine flip" src="assets/img/el-vine1.png" alt="" style="left:79%;height:30%">
+      <!-- canopy shade -->
+      <div class="fz-canopy"></div>
+      <!-- foreground trunks -->
+      <img class="trunk front" src="assets/img/el-trunk-dark.png" alt="" style="left:-3%;width:190px">
+      <img class="trunk front" src="assets/img/el-trunk-dark.png" alt="" style="left:51%;width:74px">
+      <img class="trunk front flip" src="assets/img/el-trunk-dark.png" alt="" style="left:88.5%;width:175px">
+      <!-- swamp -->
+      <div class="swamp-block">
+        <svg class="water-top" viewBox="0 0 1600 50" preserveAspectRatio="none">
+          <path d="M0 32 Q 200 16 400 28 T 800 24 T 1200 30 T 1600 22 L 1600 50 L 0 50 Z" fill="#41ccb6"/>
+        </svg>
+      </div>
+      <span class="streak" style="left:13%;top:64%;width:170px"></span>
+      <span class="streak" style="left:55%;top:66%;width:140px"></span>
+      <span class="streak" style="left:33%;top:71%;width:200px"></span>
+      <span class="streak" style="left:74%;top:74%;width:160px"></span>
+      <span class="streak" style="left:9%;top:79%;width:150px"></span>
+      <span class="streak" style="left:58%;top:84%;width:210px"></span>
+      <span class="streak" style="left:24%;top:94%;width:170px"></span>
+      <span class="streak" style="left:68%;top:96%;width:150px"></span>
+      <img class="fz-piece" src="assets/img/el-trunk-base.png" alt="" style="left:0.5%;top:57%;width:170px">
+      <img class="fz-piece flip" src="assets/img/el-trunk-base.png" alt="" style="left:40%;top:57.4%;width:150px">
+      <img class="fz-piece" src="assets/img/el-trunk-base.png" alt="" style="left:69%;top:57%;width:160px">
+      <img class="fz-piece flip" src="assets/img/el-trunk-base.png" alt="" style="right:-1.5%;top:57.2%;width:185px">
+      <img class="fz-piece" src="assets/img/el-islet.png" alt="" style="right:5%;top:87.5%;width:230px">
+      <img class="fz-piece" src="assets/img/el-log.png" alt="" style="left:37%;top:91%;width:190px">
+      <img class="fz-piece" src="assets/img/prop-lilypads.png" alt="" style="left:48%;top:77%;width:130px">
+      <img class="fz-piece flip" src="assets/img/prop-reeds.png" alt="" style="right:1.5%;top:68%;width:105px">
+      <img class="fz-piece" src="assets/img/el-bank.png" alt="" style="left:-2%;top:84%;width:31%">
+      <img class="fz-piece" src="assets/img/prop-flower-bush.png" alt="" style="left:2.5%;top:85.5%;width:95px">
+      <img class="fz-piece" src="assets/img/prop-reeds.png" alt="" style="left:28%;top:88%;width:85px">
+    </div>
 
     <!-- mushrooms on trunk (above water, left-center) -->
     <img src="assets/img/prop-mushrooms.png" alt="" class="sprite s-mushrooms">
@@ -152,7 +217,23 @@
 
   <!-- ============ PROTECT NATURE ============ -->
   <section class="sec sec-protect" id="protect">
-    <img class="scene-bg protect-bg" src="assets/img/bg-lake-meadow.png" alt="">
+    <div class="scene pz" aria-hidden="true">
+      <span class="streak" style="left:16%;top:10%;width:190px"></span>
+      <span class="streak" style="left:58%;top:7%;width:160px"></span>
+      <span class="streak" style="left:36%;top:24%;width:210px"></span>
+      <span class="streak" style="left:76%;top:32%;width:150px"></span>
+      <span class="streak" style="left:10%;top:42%;width:170px"></span>
+      <span class="streak" style="left:52%;top:52%;width:200px"></span>
+      <img src="assets/img/el-outcrop.png" alt="" style="left:-2%;top:-4%;width:27%">
+      <img class="flip" src="assets/img/el-outcrop.png" alt="" style="right:-4%;top:-6%;width:21%">
+      <img src="assets/img/prop-lilypads.png" alt="" style="left:36%;top:28%;width:115px">
+      <img class="flip" src="assets/img/prop-lilypads.png" alt="" style="left:20%;top:55%;width:135px">
+      <img src="assets/img/prop-reeds.png" alt="" style="left:5.5%;top:24%;width:92px">
+      <img class="flip" src="assets/img/prop-reeds.png" alt="" style="right:2%;top:56%;width:110px">
+      <img src="assets/img/el-hill.png" alt="" style="left:-6%;bottom:-5%;width:62%">
+      <img class="flip" src="assets/img/el-hill.png" alt="" style="right:-8%;bottom:-7%;width:66%">
+      <img src="assets/img/el-mound.png" alt="" style="right:1%;bottom:13%;width:30%">
+    </div>
 
     <!-- frog on the rock -->
     <img src="assets/img/animal-frog.png" alt="" class="sprite animal a-frog">
@@ -181,7 +262,39 @@
 
   <!-- ============ SAVANNA / CONSERVATION ============ -->
   <section class="sec sec-savanna" id="conservation">
-    <img class="scene-bg savanna-bg" src="assets/img/bg-savanna.png" alt="">
+    <div class="scene sz" aria-hidden="true">
+      <svg class="sz-grass" viewBox="0 0 1600 170" preserveAspectRatio="none">
+        <path d="M0 0 L1600 0 L1600 60 Q 1380 130 1080 96 Q 760 60 480 110 Q 220 156 0 110 Z" fill="#5da23c"/>
+        <path d="M0 0 L1600 0 L1600 30 Q 1400 86 1120 60 Q 800 30 520 72 Q 240 110 0 70 Z" fill="#74b54a"/>
+      </svg>
+      <svg class="sz-patches" viewBox="0 0 1600 1300" preserveAspectRatio="none">
+        <g fill="#e2912a" opacity="0.5">
+          <ellipse cx="320" cy="380" rx="170" ry="22"/>
+          <ellipse cx="1120" cy="330" rx="190" ry="24"/>
+          <ellipse cx="700" cy="580" rx="170" ry="20"/>
+          <ellipse cx="1380" cy="640" rx="150" ry="20"/>
+          <ellipse cx="240" cy="800" rx="170" ry="22"/>
+          <ellipse cx="900" cy="950" rx="200" ry="24"/>
+          <ellipse cx="420" cy="1130" rx="180" ry="22"/>
+        </g>
+        <g fill="#f6bc55" opacity="0.7">
+          <ellipse cx="560" cy="460" rx="120" ry="14"/>
+          <ellipse cx="1240" cy="500" rx="130" ry="15"/>
+          <ellipse cx="180" cy="650" rx="110" ry="13"/>
+          <ellipse cx="1050" cy="780" rx="140" ry="15"/>
+          <ellipse cx="640" cy="1070" rx="130" ry="14"/>
+        </g>
+      </svg>
+      <img src="assets/img/el-dry-grass.png" alt="" style="left:9%;top:22%;width:90px">
+      <img class="flip" src="assets/img/el-dry-grass.png" alt="" style="left:54%;top:30%;width:70px">
+      <img src="assets/img/el-dry-grass.png" alt="" style="right:6%;top:20%;width:100px">
+      <img class="flip" src="assets/img/el-dry-grass.png" alt="" style="left:20%;top:62%;width:80px">
+      <img src="assets/img/el-dry-grass.png" alt="" style="right:24%;top:58%;width:88px">
+      <img class="flip" src="assets/img/el-dry-grass.png" alt="" style="left:38%;top:86%;width:96px">
+      <img src="assets/img/el-dry-grass.png" alt="" style="right:8%;top:90%;width:80px">
+      <img src="assets/img/el-rockslab.png" alt="" style="right:15%;top:23%;width:170px">
+      <img class="flip" src="assets/img/el-rockslab.png" alt="" style="left:30%;top:66%;width:130px">
+    </div>
 
     <!-- butterfly -->
     <svg class="sprite a-butterfly" viewBox="0 0 70 60" aria-hidden="true">
@@ -210,7 +323,19 @@
 
   <!-- ============ PRICING / BEACH ============ -->
   <section class="sec sec-pricing" id="pricing">
-    <img class="scene-bg beach-bg" src="assets/img/bg-beach.png" alt="">
+    <div class="scene bz" aria-hidden="true">
+      <svg class="bz-dunes" viewBox="0 0 1600 1100" preserveAspectRatio="none">
+        <g fill="#e8a232" opacity="0.5">
+          <path d="M0 240 Q 300 200 640 232 Q 980 264 1320 228 Q 1480 212 1600 230 L 1600 280 Q 1300 310 960 282 Q 600 254 280 288 Q 120 302 0 290 Z"/>
+          <path d="M0 560 Q 340 520 700 552 Q 1060 584 1400 548 L 1600 540 L 1600 600 Q 1260 640 900 608 Q 540 580 200 612 L 0 620 Z"/>
+        </g>
+      </svg>
+      <img src="assets/img/el-beach-set.png" alt="" style="left:5%;top:56%;width:160px">
+      <img src="assets/img/el-starfish.png" alt="" style="right:7%;top:47%;width:52px">
+      <img class="flip" src="assets/img/el-starfish.png" alt="" style="left:13%;top:30%;width:38px">
+      <img src="assets/img/el-dry-grass.png" alt="" style="right:3%;top:11%;width:90px">
+      <img class="flip" src="assets/img/el-dry-grass.png" alt="" style="right:9%;top:9%;width:68px">
+    </div>
 
     <div class="pricing-head">
       <h2 class="big-title brown" data-letters>VSTUPNÉ A OTEVÍRACÍ DOBA</h2>
@@ -286,7 +411,22 @@
 
   <!-- ============ THINGS TO DO / UNDERWATER ============ -->
   <section class="sec sec-things" id="things">
-    <img class="scene-bg things-bg" src="assets/img/bg-underwater-light.png" alt="">
+    <div class="scene tz" aria-hidden="true">
+      <svg class="tz-rays" viewBox="0 0 1600 1500" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="rayT" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
+            <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <polygon points="180,-20 320,-20 660,1100 480,1100" fill="url(#rayT)"/>
+        <polygon points="560,-20 660,-20 1060,1000 930,1000" fill="url(#rayT)" opacity="0.8"/>
+        <polygon points="1040,-20 1130,-20 1480,900 1370,900" fill="url(#rayT)" opacity="0.7"/>
+        <polygon points="1380,-20 1450,-20 1640,560 1560,560" fill="url(#rayT)" opacity="0.6"/>
+      </svg>
+      <img src="assets/img/el-reef-rock.png" alt="" style="right:-3%;bottom:-4%;width:36%">
+      <img src="assets/img/el-kelp.png" alt="" style="right:32%;bottom:-2%;width:120px">
+    </div>
 
     <div class="things-head">
       <h2 class="big-title white" data-letters>ZÁŽITKY V ZOO</h2>
@@ -336,7 +476,23 @@
 
   <!-- ============ TESTIMONIALS ============ -->
   <section class="sec sec-love" id="testimonials">
-    <img class="scene-bg love-bg" src="assets/img/bg-underwater-deep.png" alt="">
+    <div class="scene lz" aria-hidden="true">
+      <svg class="lz-art" viewBox="0 0 1600 1600" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="rayL" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff" stop-opacity="0.10"/>
+            <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <polygon points="280,-20 400,-20 700,700 560,700" fill="url(#rayL)"/>
+        <polygon points="900,-20 990,-20 1280,600 1170,600" fill="url(#rayL)" opacity="0.8"/>
+        <path d="M40 1430 C 90 1380 190 1360 280 1380 C 330 1392 360 1416 360 1438 C 300 1452 180 1456 100 1446 C 70 1462 50 1474 30 1478 C 36 1462 38 1446 40 1430 Z" fill="#0e7f6d" opacity="0.65"/>
+        <path d="M268 1372 C 274 1352 290 1340 308 1340 C 298 1356 296 1368 298 1382 Z" fill="#0e7f6d" opacity="0.65"/>
+        <path d="M0 1600 L 0 1480 Q 120 1430 260 1460 Q 400 1490 520 1470 Q 660 1446 800 1480 Q 960 1516 1120 1490 Q 1300 1460 1440 1500 Q 1540 1526 1600 1510 L 1600 1600 Z" fill="#0d6f5f"/>
+      </svg>
+      <img src="assets/img/el-kelp.png" alt="" style="left:27%;bottom:-2%;width:100px">
+      <img class="flip" src="assets/img/el-kelp.png" alt="" style="right:18%;bottom:-3%;width:85px">
+    </div>
 
     <div class="love-head">
       <h2 class="big-title white"><span data-letters>LIDÉ NÁS</span> <span data-letters>MILUJÍ!</span></h2>
@@ -429,7 +585,17 @@
 
   <!-- ============ CTA + FOOTER ============ -->
   <section class="sec sec-deep" id="discover">
-    <img class="scene-bg deep-bg" src="assets/img/bg-underwater-deep2.png" alt="">
+    <div class="scene dz" aria-hidden="true">
+      <svg class="dz-art" viewBox="0 0 1600 1300" preserveAspectRatio="none">
+        <path d="M0 560 L 0 430 Q 90 380 180 420 L 260 380 Q 360 350 440 410 Q 540 470 660 440 Q 800 405 920 450 Q 1060 500 1200 460 Q 1340 420 1460 470 Q 1540 502 1600 480 L 1600 620 Q 1200 700 800 660 Q 400 620 0 660 Z" fill="#0e8170" opacity="0.85"/>
+        <path d="M0 1300 L 0 540 Q 120 500 240 540 Q 320 566 380 540 Q 420 590 380 650 Q 320 730 360 800 Q 200 840 80 800 Q 30 786 0 796 Z" fill="#0b6e5f" opacity="0.6"/>
+        <path d="M0 1300 L 0 1190 Q 200 1140 420 1170 Q 660 1204 880 1170 Q 1120 1136 1320 1176 Q 1480 1206 1600 1186 L 1600 1300 Z" fill="#0a6354"/>
+        <ellipse cx="640" cy="1190" rx="90" ry="14" fill="#085546" opacity="0.6"/>
+        <ellipse cx="1330" cy="1196" rx="120" ry="16" fill="#085546" opacity="0.6"/>
+      </svg>
+      <img src="assets/img/el-kelp.png" alt="" style="left:10%;bottom:15%;width:110px">
+      <img class="flip" src="assets/img/el-kelp.png" alt="" style="left:17%;bottom:13%;width:80px">
+    </div>
 
     <!-- fish -->
     <img src="assets/img/fish-blue-tang.png" alt="" class="sprite animal a-bluetang">
